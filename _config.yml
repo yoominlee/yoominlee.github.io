@@ -210,6 +210,7 @@ yat:
 markdown: kramdown
 kmarkdown:
   input: GFM
+asset_url: /assets
 
 plugins:
   - jekyll-feed
