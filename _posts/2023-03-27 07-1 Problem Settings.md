@@ -27,7 +27,7 @@ tags: [DeepLearning, ITE4053]
 
 - development sets
 
-- test sets
+- test sets 
 
 
 
