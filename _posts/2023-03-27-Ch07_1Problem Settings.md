@@ -150,12 +150,12 @@ W1 = 0.4, W2 = 0.4  -> L2 = 0.32   L1 = 0.8
 L2를 사용하면 밑의 경우를 선택할 것이고, L1을 사용하면 위의 경우를 선택.
 
 
-$$ J(W^{\[1]},b^{\[1]}, ... ,W^{[L]},b^{[L]}) = \frac{1}{m} \sum_{i=1}^{m} L(\hat{y}^{i}, y^{i}) $$   
+$$J(W^{\[1]},b^{\[1]}, ... ,W^{[L]},b^{[L]}) = \frac{1}{m} \sum_{i=1}^{m} L(\hat{y}^{i}, y^{i}) $$   
 위 original cost function으로 gradient계산하고 이를 통해 W 업데이트.
 
 그리고 unknown W를 업데이트 할때 gradient만 사용하는 것이 아니라 페널티항을 더해서 가중치 축소.
 
-![3][3] 
+![3][3]   
 ![4][4]   
 
 마지막 줄이 modified version.
@@ -170,10 +170,104 @@ regularization 너무 세게 걸면,
 very large $\lambda$ -> $W^{\[l]} \approx 0 $
 대부분의 뉴런이 0이되고, high bias 문제 발생할 수 있음
 
+작은 network로 high variance문제 해결할 수 있음
+
+#### How does regularization prevent overfitting?
+
+![5][5]   
+
+input이 0에 가까워지면, almost linear
+
+
+????? PPT 35 슬라이드 다시
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Dropout regularization
+
+![6][6]   
+
+단계\)   
+x표시된 것이 랜덤하게 제거됨   
+-> 네트워크는 simple, small하게 변함.
+
+이후 다시 다른 뉴런들이 random하게 x표시 쳐짐   
+
+- training 단계에서만 unit remove함!   
+마지막 test시에는 다 사용   
+- x표시 한 노드의 output을 다음 layer에서 보지 못하게 하는 것.   
+- structure 자체를 다시 짜지않고. 구조는 동일하되, 값만.
+- Intuition: Can't rely on any one feature, thus spread out weights.   
+언제 없어질지 모르니 특정 노드에 중요한 일 맡길 수 X (W가 커질 수 X)
+- dropout의 확률은 hyper parameter.
+- Layer 마다 다른 확률 쓸 수 O
+
+하단 이미지는 dropout 구현하는 psudo code
+
+![7][7]   
+
+"a3 /= keep_prob" 하는 이유:   
+Weight sum 될텐데, test 때 train 때와 비교해서 큰 값이 들어가지 않도록   
+이 부분은 test때에만 사용하는 부분.   
+$\because$ test 때에는 제거되는것 없이 전부 사용해서
+
+
+### Data augmentation
+:over fitting 해결하는 다른 방법
+
+이미지 flipping, rotating 등 geometry 변화.   
+마치 여러장의 그림 데이터가 있는 것 처럼 만들 수 O.   
+100% 효과   
+
+### Early stopping
+
+![8][8]   
+
+overfitting이 되었을 때 test set의 cost는 줄어들지만 train의 cost가 증가하는데, 이를 방지하기 위해 일찍 멈추는 것
+
+### Normalize training sets
+![9][9]   
+
+단계\)   
+Training set에서 mean 빼고,   
+normalize variance   
+=> zero mean, unit variance (평균 0, 분산1) 가지게도록 normalize 할 수 O
+
+#### Why normalize inputs?
+![10][10]   
+
+min 값 더 잘 찾아갈 수 있도록
+
+### Weight initialization for deep network
+basic idea : large n -> smaller $W_{i}$
+
+hidden layer 안에 hidden unit의 개수가 많아지면, W 작게 씀   
+
+Q. Output 결과가 너무 크지 않게 조절 위해 Weight initialization?
+A. 경험적인 부분. 너무 크면 이상함 ex.1억
+
+
+
 [1]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/1.jpg
 [2]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/2.jpg
 [3]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/3.jpg
 [4]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/4.jpg
+[5]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/5.jpg
+[6]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/6.jpg
+[7]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/7.jpg
+[8]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/8.jpg
+
 
 출처1 : 2023-1 ITE4052 수업  
 [출처2](https://lsjsj92.tistory.com/391)   
