@@ -101,15 +101,15 @@ Variance 확인하고 싶으면, train set과 dev set error의 차이를 보면 
 ex/) train set error = 1% 인데, dev set error = 11% 인 경우
 
 #### Basic recipe for machine learning
-[2] 피피티에 있는 흐름도
+![2][2]  
 
-1 : 맨 먼저 bias 높은지 확인. (train set performance)
-2 : 만약 높다면, high bias. 초등학생이 문제 푸는 상황
-3 : 해결책은 고등학생으로 선수 바꾸는 것 = bigger network, 더 길게 학습 등
-4 : 위 내용 반복해서 high bias 아니라면, 다음으로 넘어감
-5 : high variance인지 확인. (dev set performance)
-6 : 만약 높다면, 문제 외워서 푸는 상황
-7 : 해결책으로 문제 못외우게 많이 줘야지 = more data, regularizaation 등   
+1 : 맨 먼저 bias 높은지 확인. (train set performance)   
+2 : 만약 높다면, high bias. 초등학생이 문제 푸는 상황   
+3 : 해결책은 고등학생으로 선수 바꾸는 것 = bigger network, 더 길게 학습 등   
+4 : 위 내용 반복해서 high bias 아니라면, 다음으로 넘어감   
+5 : high variance인지 확인. (dev set performance)   
+6 : 만약 높다면, 문제 외워서 푸는 상황   
+7 : 해결책으로 문제 못외우게 많이 줘야지 = more data, regularizaation 등      
 
 ### High variance (overfitting) 해결책
 - Regularization
@@ -122,19 +122,63 @@ ex/) train set error = 1% 인데, dev set error = 11% 인 경우
 - *Weight가 너무 큰 값들을 가지지 않도록 하는 것*
 - Overfitting 막거나 Variance낮주는데 도움을 줌.
 
+> 이렇게 모델의 Complexity와 데이터를 표현하는 정보의 규모가 서로 매칭되지 않을때 Underfit, Overfit이 일어나는 것을 Bad generalization이라고 논문에서 표현하고 있습니다. 
+
+> 데이터가 단순하고 모델이 복잡하면, 학습을 하면서 굉장히 작은 값이었던 weight들의 값이 점점 증가하게 되면서 Overfitting이 발생하게 됩니다. weight값이 커지게될 수록 학습데이터에 영향을 많이 받게 되고, 학습데이터에 딱 모델이 맞춰지게 되는 것이죠. 이를 'local noise의 영향을 크게 받아서, outlier들에 모델이 맞춰지는 현상' 이라고 표현합니다.
+
+
 $$ J(w,b) = \frac{1}{m} \sum_{i=1}^{m} L(\hat{y}^{i}, y^{i}) + \frac{\lambda}{2m} \vert \vert w \vert \vert^{2}_{2} $$
+여기서 $\lambda$ : regularization parameter 
+
+L2 regularization: $\vert \vert w\vert \vert_{2}^{2} = \sum_{i=1}^{n} w_{j}^{2} = w^{T}w $   
+
+L1 regularization: $ \vert \vert w\vert \vert_{1} = \sum_{i=1}^{n}\vert m_{j}\vert $  ->(sparse w : 몇개의 큰 값 허용한다는 뜻) 
 
 
+*(w 하단의 숫자가 1이면 L1 norm, 2면 ,L2 norm)*
 
 
+ex\)
+W = \[W1,W2]   
+W1 = 0, W2 = 0.7    -> L2 = 0.49   L1 = 0.7   
+W1 = 0.4, W2 = 0.4  -> L2 = 0.32   L1 = 0.8   
+
+위 예시보면, L2는 전반적으로 낮은 걸 선호하는 것을 볼 수 있고   
+            L1은 엄청큰게 하나 있어도 나며지가 0이면 좋다고 평가
+
+따라서 퍼포먼스가 동일한 경우 위 두 경우 중   
+L2를 사용하면 밑의 경우를 선택할 것이고, L1을 사용하면 위의 경우를 선택.
+
+
+$$ J(W^{\[1]},b^{\[1]}, ... ,W^{[L]},b^{[L]}) = \frac{1}{m} \sum_{i=1}^{m} L(\hat{y}^{i}, y^{i}) $$   
+위 original cost function으로 gradient계산하고 이를 통해 W 업데이트.
+
+그리고 unknown W를 업데이트 할때 gradient만 사용하는 것이 아니라 페널티항을 더해서 가중치 축소.
+
+![3][3] 
+![4][4]   
+
+마지막 줄이 modified version.
+
+
+L1, L2부분에서 물리적인 의미만 보면 W 작아지는것 선호하는걸 볼 수 있었음   
+동일한 이야기로   
+Gradient 계산까지 보면, 실제로 원래보다 W가 작아지는 것을 볼 수 있음   
+
+주의할 점\)
+regularization 너무 세게 걸면,
+very large $\lambda$ -> $W^{\[l]} \approx 0 $
+대부분의 뉴런이 0이되고, high bias 문제 발생할 수 있음
 
 [1]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/1.jpg
-[2]: 
-
+[2]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/2.jpg
+[3]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/3.jpg
+[4]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/4.jpg
 
 출처1 : 2023-1 ITE4052 수업  
-[출처2](https://lsjsj92.tistory.com/391)
-
+[출처2](https://lsjsj92.tistory.com/391)   
+[출처3](https://simsim231.tistory.com/93)   
+[출처4](https://light-tree.tistory.com/125)   
 
 
 
