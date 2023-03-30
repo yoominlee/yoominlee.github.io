@@ -4,6 +4,7 @@ title: Problem Settings
 subtitle: 07 Problem Settings
 categories: DeepLearning
 tags: [DeepLearning, ITE4053]
+use_math: true
 ---
 
 ## Problem Setup
@@ -77,12 +78,58 @@ rule of thimb for splitting data:
 - 최근에 deep learning era에서는 중요도 조금 줄었음
 ![1][1]  
 
-- high bias
+- High bias
     - under fitting
+    - too simple classifier (문제 아예 못푸는 것)
+    - training set 못다룰 정도로 퍼포먼스 낮음
+
+- High variance
+    - overfitting
+    - too complex classifier
+    - training에는 잘맞아도 test set handle 못함
+    - training set은 잘 푸는데 test set은 X = "둘 사이의 Variance 크다"
+
+#### Q. 그래서 bias와 variance가 높은지는 어떻게 확인?
+A.   
+Bias 확인하고 싶으면 train set만 보면 됨. (train set error)
+'높다'는 것의 기준은 human error.
+    만약 human error가 0%에 가까우면, 15%는 높은것.
+    하지만 human error가 15%정도면, 15%는 high bias problem에 해당하지 않음.
+
+Variance 확인하고 싶으면, train set과 dev set error의 차이를 보면 된다.
+둘의 차이가 크면 high variance.
+ex/) train set error = 1% 인데, dev set error = 11% 인 경우
+
+#### Basic recipe for machine learning
+[2] 피피티에 있는 흐름도
+
+1 : 맨 먼저 bias 높은지 확인. (train set performance)
+2 : 만약 높다면, high bias. 초등학생이 문제 푸는 상황
+3 : 해결책은 고등학생으로 선수 바꾸는 것 = bigger network, 더 길게 학습 등
+4 : 위 내용 반복해서 high bias 아니라면, 다음으로 넘어감
+5 : high variance인지 확인. (dev set performance)
+6 : 만약 높다면, 문제 외워서 푸는 상황
+7 : 해결책으로 문제 못외우게 많이 줘야지 = more data, regularizaation 등   
+
+### High variance (overfitting) 해결책
+- Regularization
+- Dropout
+- Data augmentation
+- Early stopping
+...
+
+### Regularization
+- *Weight가 너무 큰 값들을 가지지 않도록 하는 것*
+- Overfitting 막거나 Variance낮주는데 도움을 줌.
+
+$$ J(w,b) = \frac{1}{m} \sum_{i=1}^{m} L(\hat{y}^{i}, y^{i}) + \frac{\lambda}{2m} \vert \vert w \vert \vert^{2}_{2} $$
+
+
 
 
 
 [1]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/1.jpg
+[2]: 
 
 
 출처1 : 2023-1 ITE4052 수업  
