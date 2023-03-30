@@ -4,6 +4,7 @@ title: Regularization, Optimization
 subtitle: Deep Learning Review
 categories: ComputerVision
 tags: [ComputerVision, ITE4052]
+use_math: true
 ---
 > 저번 글에서 최적의 W를 찾기 위해 Loss function으로 평가 하였는데,  
 > 찾은 W가 너무 test set에 overfitting 될 수 있는 문제가 있음

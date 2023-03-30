@@ -4,6 +4,7 @@ title: Linear Classifier, Loss function
 subtitle: Deep Learning Review
 categories: ComputerVision
 tags: [ComputerVision, ITE4052]
+use_math: true
 ---
 
 ## Linear Classifier
