@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Problem Settings
-subtitle: 07 Problem Settings
+title: 07-1 Problem Settings
+subtitle: Dataset, train dev test set, bias and variance, regularization
 categories: DeepLearning
 tags: [DeepLearning, ITE4053]
 use_math: true
