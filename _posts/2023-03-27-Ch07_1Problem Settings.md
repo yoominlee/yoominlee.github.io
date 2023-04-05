@@ -7,6 +7,11 @@ tags: [DeepLearning, ITE4053]
 use_math: true
 ---
 
+목차
+- Problem Setup   
+- Bias/Variance
+- Tips
+
 ## Problem Setup
 
 ### Applied ML is a highly iterative process
@@ -38,10 +43,10 @@ use_math: true
 " 어떻게 나눌 것인가 하는 문제 "
 
 rule of thumb for splitting data
-- previous era (# of samples = 100 or 1000 or 10000)
+- previous era (# of samples = 100 or 1000 or 10000)   
     training/test = 70/30 %
     training/dev/test = 60/20/20 %
-- big data era /(# of samples = 1,000,000) : 양 많은 경우
+- big data era /(# of samples = 1,000,000) : 양 많은 경우   
     training/dev = 99/1 %
 
 -> 데이터셋 양이 적은 경우 test set 비율 ⬆️ 
@@ -72,7 +77,8 @@ rule of thimb for splitting data:
 - dev와 test set 같은 distribution
 - test set 가지지 않는것 괜찮을 수 있다. (only dev set)
 
-### Bias and Variance 
+---
+## Bias and Variance 
 
 - bias와 variance는 tradeoff 관계.(하나 좋게 하면 하나 안좋아지는 관계)
 - 최근에 deep learning era에서는 중요도 조금 줄었음
@@ -89,33 +95,33 @@ rule of thimb for splitting data:
     - training에는 잘맞아도 test set handle 못함
     - training set은 잘 푸는데 test set은 X = "둘 사이의 Variance 크다"
 
-#### Q. 그래서 bias와 variance가 높은지는 어떻게 확인?
+### Q. 그래서 bias와 variance가 높은지는 어떻게 확인하나?
 A.   
-Bias 확인하고 싶으면 train set만 보면 됨. (train set error)
-'높다'는 것의 기준은 human error.
-    만약 human error가 0%에 가까우면, 15%는 높은것.
-    하지만 human error가 15%정도면, 15%는 high bias problem에 해당하지 않음.
+<u>Bias가 높은지 확인하고 싶으면</u> train set만 보면 된다. (train set error)   
+'높다'는 것의 기준은 human error.   
+ex\) 만약 human error가 0%에 가까우면, 15%는 높은것.   
+하지만 human error가 15%정도면, 15%는 high bias problem에 해당하지 않음.
 
-Variance 확인하고 싶으면, train set과 dev set error의 차이를 보면 된다.
-둘의 차이가 크면 high variance.
-ex/) train set error = 1% 인데, dev set error = 11% 인 경우
+<u> Variance 확인하고 싶으면,</u> train set과 dev set error의 차이를 보면 된다.
+둘의 차이가 크면 high variance.   
+ex\) train set error = 1% 인데, dev set error = 11% 인 경우
 
-#### Basic recipe for machine learning
+### Basic recipe for machine learning
 ![2][2]  
 
-1 : 맨 먼저 bias 높은지 확인. (train set performance)   
+1 : 맨 먼저 **bias** 높은지 확인. (train set performance)   
 2 : 만약 높다면, high bias. 초등학생이 문제 푸는 상황   
 3 : 해결책은 고등학생으로 선수 바꾸는 것 = bigger network, 더 길게 학습 등   
 4 : 위 내용 반복해서 high bias 아니라면, 다음으로 넘어감   
-5 : high variance인지 확인. (dev set performance)   
-6 : 만약 높다면, 문제 외워서 푸는 상황   
+5 : **high variance**인지 확인. (dev set performance)   
+6 : 만약 높다면, 문제 외워서 푸는 상황(오버피팅)   
 7 : 해결책으로 문제 못외우게 많이 줘야지 = more data, regularizaation 등      
 
 ### High variance (overfitting) 해결책
 - Regularization
 - Dropout
 - Data augmentation
-- Early stopping
+- Early stopping   
 ...
 
 ### Regularization
@@ -132,7 +138,7 @@ $$ J(w,b) = \frac{1}{m} \sum_{i=1}^{m} L(\hat{y}^{i}, y^{i}) + \frac{\lambda}{2m
 
 L2 regularization: $\vert \vert w\vert \vert_{2}^{2} = \sum_{i=1}^{n} w_{j}^{2} = w^{T}w $   
 
-L1 regularization: $ \vert \vert w\vert \vert_{1} = \sum_{i=1}^{n}\vert m_{j}\vert $  ->(sparse w : 몇개의 큰 값 허용한다는 뜻) 
+L1 regularization: $ \vert \vert w\vert \vert_{1} = \sum_{i=1}^{n}\vert m_{j}\vert $  -> (sparse w : 몇개의 큰 값 허용한다는 뜻) 
 
 
 *(w 하단의 숫자가 1이면 L1 norm, 2면 ,L2 norm)*
@@ -143,17 +149,18 @@ W = \[W1,W2]
 W1 = 0, W2 = 0.7    -> L2 = 0.49   L1 = 0.7   
 W1 = 0.4, W2 = 0.4  -> L2 = 0.32   L1 = 0.8   
 
-위 예시보면, L2는 전반적으로 낮은 걸 선호하는 것을 볼 수 있고   
-            L1은 엄청큰게 하나 있어도 나며지가 0이면 좋다고 평가
+위 예시보면,    
+<u>L2는 전반적으로 낮은 걸 선호하는 것을 볼 수 있고   
+L1은 엄청 큰게 하나 있어도 나며지가 0이면 좋다고 평가 </u> 
 
 따라서 퍼포먼스가 동일한 경우 위 두 경우 중   
 L2를 사용하면 밑의 경우를 선택할 것이고, L1을 사용하면 위의 경우를 선택.
 
 
-$$J(W^{\[1]},b^{\[1]}, ... ,W^{[L]},b^{[L]}) = \frac{1}{m} \sum_{i=1}^{m} L(\hat{y}^{i}, y^{i}) $$   
+$$ J(W^{[1]},b^{[1]}, ... ,W^{[L]},b^{[L]}) = \frac{1}{m} \sum_{i=1}^{m} L(\hat{y}^{i}, y^{i}) $$   
 위 original cost function으로 gradient계산하고 이를 통해 W 업데이트.
 
-그리고 unknown W를 업데이트 할때 gradient만 사용하는 것이 아니라 페널티항을 더해서 가중치 축소.
+그리고 unknown W를 업데이트 할때 gradient만 사용하는 것이 아니라 **페널티항을 더해서 가중치 축소.**
 
 ![3][3]   
 ![4][4]   
@@ -165,34 +172,25 @@ L1, L2부분에서 물리적인 의미만 보면 W 작아지는것 선호하는�
 동일한 이야기로   
 Gradient 계산까지 보면, 실제로 원래보다 W가 작아지는 것을 볼 수 있음   
 
-주의할 점\)
-regularization 너무 세게 걸면,
-very large $\lambda$ -> $W^{\[l]} \approx 0 $
+주의할 점\) !!   
+regularization 너무 세게 걸면,   
+very large $\lambda$ -> $W^{[l]} \approx 0 $   
 대부분의 뉴런이 0이되고, high bias 문제 발생할 수 있음
 
 작은 network로 high variance문제 해결할 수 있음
 
-#### How does regularization prevent overfitting?
+### How does regularization prevent overfitting?
 
 ![5][5]   
 
-input이 0에 가까워지면, almost linear
+input이 0에 가까워지면, almost linear. 활성화 함수가 복잡도를 올리는 것을 완화시켜줌   
 
+디테일한 이유는 내 다른 포스트에서:   
+[왜 활성화 함수 쓰는지]({% post_url 2023-04-05-WhyActivationFunction %})
 
-????? PPT 35 슬라이드 다시
-
-
-
-
-
-
-
-
-
-
-
-
-
+**주의할 부분**
+뒤에 나오는 regularization은 input 값 자체를 정규화 하는것.   
+여기서는 z가 정규화 되는 대상.
 
 ### Dropout regularization
 
@@ -220,15 +218,15 @@ x표시된 것이 랜덤하게 제거됨
 "a3 /= keep_prob" 하는 이유:   
 Weight sum 될텐데, test 때 train 때와 비교해서 큰 값이 들어가지 않도록   
 이 부분은 test때에만 사용하는 부분.   
-$\because$ test 때에는 제거되는것 없이 전부 사용해서
+$\because$ test 때에는 제거되는것 없이 전부 사용하기 때문에
 
 
 ### Data augmentation
-:over fitting 해결하는 다른 방법
+: over fitting 해결하는 다른 방법
 
 이미지 flipping, rotating 등 geometry 변화.   
 마치 여러장의 그림 데이터가 있는 것 처럼 만들 수 O.   
-100% 효과   
+100% 효과있는 방법   
 
 ### Early stopping
 
@@ -254,10 +252,11 @@ basic idea : large n -> smaller $W_{i}$
 
 hidden layer 안에 hidden unit의 개수가 많아지면, W 작게 씀   
 
-Q. Output 결과가 너무 크지 않게 조절 위해 Weight initialization?
+> Q. Output 결과가 너무 크지 않게 조절 위해 Weight initialization?   
 A. 경험적인 부분. 너무 크면 이상함 ex.1억
 
 
+---
 
 [1]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/1.jpg?raw=true
 [2]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/2.jpg?raw=true
@@ -267,15 +266,11 @@ A. 경험적인 부분. 너무 크면 이상함 ex.1억
 [6]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/6.jpg?raw=true
 [7]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/7.jpg?raw=true
 [8]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/8.jpg?raw=true
+[9]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/9.jpg?raw=true
+[10]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/10.jpg?raw=true
 
 
 출처1 : 2023-1 ITE4052 수업  
-[출처2](https://lsjsj92.tistory.com/391)   
-[출처3](https://simsim231.tistory.com/93)   
-[출처4](https://light-tree.tistory.com/125)   
-
-
-
-
-
-
+[출처2](https://lsjsj92.tistory.com/391) https://lsjsj92.tistory.com/391   
+[출처3](https://simsim231.tistory.com/93) https://simsim231.tistory.com/93   
+[출처4](https://light-tree.tistory.com/125) https://light-tree.tistory.com/125   
