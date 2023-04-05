@@ -161,10 +161,11 @@ RISC는 메모리 접근을 단순화, 최소화 하는 대신 레지스터 적�
 **jal** (jump and link)              jal 2500             ->    $ra = PC + 4 ; go to 10000       - resgister 로 점프하여 링크
 
 
+---
 
 [출처1 ](http://www.yes24.com/Product/Goods/111378840) 혼자 공부하는 컴퓨터 구조+운영체제
 
-[출처2 ](https://programming119.tistory.com/41)
+[출처2 ](https://programming119.tistory.com/41) https://programming119.tistory.com/41
 
 
 

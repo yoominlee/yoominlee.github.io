@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [ITE4052]Linear Classifier, Loss function
+title: ITE4052_Linear Classifier, Loss function
 subtitle: Deep Learning Review
 categories: ComputerVision
 tags: [ComputerVision, ITE4052]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [ITE4052]Regularization, Optimization
+title: ITE4052_Regularization, Optimization
 subtitle: Deep Learning Review
 categories: ComputerVision
 tags: [ComputerVision, ITE4052]
