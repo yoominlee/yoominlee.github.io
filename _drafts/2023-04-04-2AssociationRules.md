@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ITE4005_3.4.2 Association Rules
+title: 3.4.2 Association Rules (ITE4005_DS)
 subtitle: Chapter5, Mining Frequent Patterns, Association and Correlations
 categories: DataScience
 tags: [DataScience, ITE4005]
@@ -90,19 +90,8 @@ $\therefore$ 둘 다 중요 -> redundant 하다고 하지 않는다.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-[1]: https://github.com/yoominlee/img/blob/main/2023-04-04-2AssociationRules/1.jpg?raw=true
-[2]: https://github.com/yoominlee/img/blob/main/2023-04-04-2AssociationRules/2.png?raw=true
+[1]: /assets/images/post_img/2023-04-04-2AssociationRules/1.jpg
+[2]: /assets/images/post_img/2023-04-04-2AssociationRules/2.png
 
 
 

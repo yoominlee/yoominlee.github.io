@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ITE4052_Linear Classifier, Loss function
+title: Linear Classifier, Loss function (ITE4052_CV)
 subtitle: Deep Learning Review
 categories: ComputerVision
 tags: [ComputerVision, ITE4052]
@@ -121,11 +121,9 @@ $5.27$
 
 
 
+[1]: /assets/images/post_img/2023-03-14-03_image-classification/1.png
 
-
-[1]: https://github.com/yoominlee/img/blob/main/2023-03-14-03_image-classification/1.png?raw=true
-
-[2]: https://github.com/yoominlee/img/blob/main/2023-03-14-03_image-classification/2.jpg?raw=true
+[2]: /assets/images/post_img/2023-03-14-03_image-classification/2.jpg
 
 출처1 : 2023-1 ITE4052 수업  
 [출처2](https://lsjsj92.tistory.com/391)

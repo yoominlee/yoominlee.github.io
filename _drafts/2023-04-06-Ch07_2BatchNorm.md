@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ITE4053_07-2 Batch Normalization
+title: 07-2 Batch Normalization (ITE4053_DL)
 subtitle: 
 categories: DeepLearning
 tags: [DeepLearning, ITE4053]

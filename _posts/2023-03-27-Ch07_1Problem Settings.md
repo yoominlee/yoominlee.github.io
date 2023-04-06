@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ITE4053_07-1 Problem Settings
+title: ITE4053_DL > 07-1 Problem Settings
 subtitle: Dataset, train dev test set, bias and variance, regularization
 categories: DeepLearning
 tags: [DeepLearning, ITE4053]

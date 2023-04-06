@@ -1,7 +1,7 @@
 ---
 layout: post
-title: ITE2031_컴퓨터구조론 기초
-subtitle: 혼자 공부하는 컴퓨터 구조+운영체제
+title: ITE2031_CS > 컴퓨터구조론 기본
+subtitle: (책)혼자 공부하는 컴퓨터 구조+운영체제
 categories: 컴퓨터구조론
 tags: [컴퓨터구조론, ITE2031]
 ---
