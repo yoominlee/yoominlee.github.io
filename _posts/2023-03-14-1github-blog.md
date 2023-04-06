@@ -186,8 +186,20 @@ $ bundle exec jekyll serve
 
 
 
+[1]: /assets/images/post_img/2023-03-14-01_github-blog/2023-03-14-01.png
+[2]: /assets/images/post_img/2023-03-14-01_github-blog/2023-03-14-02.png
+[3]: /assets/images/post_img/2023-03-14-01_github-blog/2023-03-14-03.png
+[4]: /assets/images/post_img/2023-03-14-01_github-blog/2023-03-14-04.png
+[5]: /assets/images/post_img/2023-03-14-01_github-blog/2023-03-14-05.png
+[6]: /assets/images/post_img/2023-03-14-01_github-blog/2023-03-14-06.png
+[7]: /assets/images/post_img/2023-03-14-01_github-blog/2023-03-14-07.png
+[8]: /assets/images/post_img/2023-03-14-01_github-blog/2023-03-14-08.png
+[9]: /assets/images/post_img/2023-03-14-01_github-blog/2023-03-14-09.png
+[10]: /assets/images/post_img/2023-03-14-01_github-blog/2023-03-14-10.png
+[11]: /assets/images/post_img/2023-03-14-01_github-blog/2023-03-14-11.png
+[12]: /assets/images/post_img/2023-03-14-01_github-blog/2023-03-14-12.png
 
-[1]: https://github.com/yoominlee/img/blob/main/2023-03-14-01_github-blog/2023-03-14-01.png?raw=true
+
 [2]: https://github.com/yoominlee/img/blob/main/2023-03-14-01_github-blog/2023-03-14-02.png?raw=true
 [3]: https://github.com/yoominlee/img/blob/main/2023-03-14-01_github-blog/2023-03-14-03.png?raw=true
 [4]: https://github.com/yoominlee/img/blob/main/2023-03-14-01_github-blog/2023-03-14-04.png?raw=true

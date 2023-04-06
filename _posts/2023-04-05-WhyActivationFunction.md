@@ -33,8 +33,7 @@ non-linearlity에 의해 복잡도가 올라가 overfitting 된 것을,
 정규화를 해주어 non-linearlity를 줄여 overfitting 예방.
 
 
-[1]: https://github.com/yoominlee/img/blob/main/2023-04-05-WhyActivationFunction/1.jpg?raw=true
-
+[1]: /assets/images/post_img/2023-04-05-WhyActivationFunction/1.jpg
 
 [출처1](https://ganghee-lee.tistory.com/30)   
 [출처2]ITE4053 수업

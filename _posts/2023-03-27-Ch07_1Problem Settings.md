@@ -259,16 +259,16 @@ A. 경험적인 부분. 너무 크면 이상함 ex.1억
 
 ---
 
-[1]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/1.jpg?raw=true
-[2]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/2.jpg?raw=true
-[3]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/3.jpg?raw=true
-[4]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/4.jpg?raw=true
-[5]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/5.jpg?raw=true
-[6]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/6.jpg?raw=true
-[7]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/7.jpg?raw=true
-[8]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/8.jpg?raw=true
-[9]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/9.jpg?raw=true
-[10]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/10.jpg?raw=true
+[1]: /assets/images/post_img/2023-03-27-Ch07_1Problem%20Settings/1.jpg
+[2]: /assets/images/post_img/2023-03-27-Ch07_1Problem%20Settings/2.jpg
+[3]: /assets/images/post_img/2023-03-27-Ch07_1Problem%20Settings/3.jpg
+[4]: /assets/images/post_img/2023-03-27-Ch07_1Problem%20Settings/4.jpg
+[5]: /assets/images/post_img/2023-03-27-Ch07_1Problem%20Settings/5.jpg
+[6]: /assets/images/post_img/2023-03-27-Ch07_1Problem%20Settings/6.jpg
+[7]: /assets/images/post_img/2023-03-27-Ch07_1Problem%20Settings/7.jpg
+[8]: /assets/images/post_img/2023-03-27-Ch07_1Problem%20Settings/8.jpg
+[9]: /assets/images/post_img/2023-03-27-Ch07_1Problem%20Settings/9.jpg
+[10]: /assets/images/post_img/2023-03-27-Ch07_1Problem%20Settings/10.jpg
 
 
 출처1 : 2023-1 ITE4052 수업  

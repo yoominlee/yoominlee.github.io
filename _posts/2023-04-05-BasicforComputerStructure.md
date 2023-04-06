@@ -169,11 +169,7 @@ RISC는 메모리 접근을 단순화, 최소화 하는 대신 레지스터 적�
 
 
 
-
-[1]: https://github.com/yoominlee/img/blob/main/2023-04-05-BasicforComputerStructures/1.jpg?raw=true
-[2]: https://github.com/yoominlee/img/blob/main/2023-04-05-BasicforComputerStructure/2.jpg?raw=true
-[3]: https://github.com/yoominlee/img/blob/main/2023-04-05-BasicforComputerStructure/3.jpg?raw=true
-[4]: https://github.com/yoominlee/img/blob/main/2023-04-05-BasicforComputerStructure/4.jpg?raw=true
-
-
-
+[1]: /assets/images/post_img/2023-04-05-BasicforComputerStructure/1.jpg
+[2]: /assets/images/post_img/2023-04-05-BasicforComputerStructure/2.jpg
+[3]: /assets/images/post_img/2023-04-05-BasicforComputerStructure/3.jpg
+[4]: /assets/images/post_img/2023-04-05-BasicforComputerStructure/4.jpg
