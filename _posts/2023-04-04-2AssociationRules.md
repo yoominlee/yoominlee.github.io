@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 3.4.2 Association Rules (ITE4005_DS)
+title: -----DRAFT-----ITE4005_DS> 3.4.2 Association Rules
 subtitle: Chapter5, Mining Frequent Patterns, Association and Correlations
 categories: DataScience
 tags: [DataScience, ITE4005]

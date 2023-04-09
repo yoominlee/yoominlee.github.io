@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 07-2 Batch Normalization (ITE4053_DL)
+title: -----DRAFT-----ITE4053_DL> 07-2 Batch Normalization 
 subtitle: 
 categories: DeepLearning
 tags: [DeepLearning, ITE4053]
@@ -38,7 +38,7 @@ hyperparameter 빨리 업데이트할 수 있음
 표기 알아두기
 $x^{(i)}$ : ()소괄호는 training #   
 $z^{[l]}$ : []대괄호는 layer #   
-$X^{\{t}}, Y^{\{t}}$ : {}중괄호는 mini-batch #
+$X^{{t}}, Y^{{t}}$ : {}중괄호는 mini-batch #
 
 
 #### One epoch

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 11-1 Convolution (ITE4053_DL)
+title: -----DRAFT-----ITE4053_DL> 11-1 Convolution 
 subtitle: 
 categories: DeepLearning
 tags: [DeepLearning, ITE4053]
