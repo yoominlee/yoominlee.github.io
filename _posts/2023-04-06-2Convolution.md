@@ -1,6 +1,6 @@
 ---
 layout: post
-title: -----DRAFT-----ITE4053_DL> 11-1 Convolution 
+title: ITE4053_DL> 11-1 Convolution 
 subtitle: 
 categories: DeepLearning
 tags: [DeepLearning, ITE4053]
@@ -9,20 +9,19 @@ use_math: true
 
 ### What is Image Filtering?
 
-Image filtering: 
-
-local image data로부터 새로운 값을 얻어내는 function.
-
+Image filtering:    
+local image data로부터 새로운 값을 얻어내는 function.   
 굉장히 많은 방법이 있지만 심플한 것 배울것
 
 ### Linear Image Filtering
 
 non linear 한 것도 많지만 이번 수업에선 단순한 linear 한것 볼것임
 
-weighted sum 하는 것을 통해(가중 합) 갑을 하나 얻을 수 있음. (convolution) → 단순한 연산 
+<u>
+weighted sum 하는 것을 통해(가중 합) 값을 하나 얻을 수 있음. (convolution) → 단순한 연산 </u>    
+
 
 image filtering 으로 할 수 있는 것들:
-
 - enhance image
     - 노이즈 제거, smooth, increase contrast, sharp하게, …
 - Extract information from images
@@ -32,8 +31,7 @@ image filtering 으로 할 수 있는 것들:
 
 (심플 리니어 필터로도 많은 것을 할 수 있음)
 
-### Point Spread Function (PSF)
-
+## Point Spread Function (PSF)
 : A linear function for the image filtering
 
 (‘point spread’ function)
@@ -47,12 +45,6 @@ psf를 위해서는 커널 필요하고, 커널 모양에 따라 값이 변함.
 중앙 파란색 → 필터(= 커널)
 
 ----
-
-~~작은 크기의 커널~~
-
-~~커널에 하나의 값 있는 예시, 두개 있는 예시~~
-
-—> 근데 값이 왜그렇게되지?? 연산이??
 
 추가 질문\)   
 Q. PSF의 연산
@@ -68,9 +60,9 @@ source image에서 값이 있는 부분에만 필터 값 적용함.
 
 ### Formulation
 
-그리고 이 메카니즘을 수학적으로 표현하면, (수학적 definition)
-
-G = H * F
+그리고 이 메카니즘을 수학적으로 표현하면,   
+(수학적 definition)   
+-> G = H * F
 
 ![5][5]
 
@@ -81,22 +73,20 @@ G = H * F
 
 [psf wiki]
 
-주어진 커널 모양으로 이미지가 퍼저나감. 그래서 이름이 ‘포인트 스프레드 커널’
+주어진 커널 모양으로 이미지가 퍼저나감. 그래서 이름이 <u>‘포인트 스프레드 커널’</u>
 
-### Convolution
+## Convolution
 
 ![7][7]
 
 실제로 두번째 줄 적용하면 컨볼루션 결과 얻을 수 있음
 
-하지만 다른 방법으로,
-
-H라는 이미지와 F라는 필터 있을 때
-
+하지만 다른 방법으로,   
+H라는 이미지와 F라는 필터 있을 때   
 필터 뒤집고, cross correlation 구하면 컨볼루션의 결과 얻을 수 있음
 
 
-### Cross-correlation
+## Cross-correlation
 
 ![8][8]
 
@@ -104,7 +94,9 @@ H라는 이미지와 F라는 필터 있을 때
 
 element wise로 곱한다.
 
-### Convolution vs. Correlation
+(연산 속도는 더 빠르지만 convolution이 직관적으로 필터 적용이 이해가 됨.)
+
+## Convolution vs. Correlation
 
 ![9][9]
 
@@ -126,13 +118,13 @@ A. 식은 다른데 결과론적으로 봤을 때 cross correlation의 필터 �
 ---
 
 Q. cross-correlation 연산이 왜 convolution보다 효율적인가?    
-가운데 한 값을 구하기 위해 convolution을 사용하면 두번 연산 후 더해야하는데   
-cross correlation 적용 시 뒤집어서 한번만 하면 되기 때문에 연산 간단??
+(가운데 한 값을 구하기 위해 convolution을 사용하면 두번 연산 후 더해야하는데   
+cross correlation 적용 시 뒤집어서 한번만 하면 되기 때문에 연산 간단하다?무슨 뜻?)
 
 A.   
 convolution은 한 픽셀의 값을 결정 할 때 주변 픽셀들이 영향을 줌. 한 픽셀을 봐도 마찬가지. 필터가 겹치는 경우 그 픽셀에 대해 영향을 줌. 
 
-(하지만 cross correlation의 경우 같은 연산인데 output기준으로 생각을 하는것 같다.)
+하지만 cross correlation의 경우 같은 연산인데 output기준으로 생각.
 
 필터 상하 좌우 뒤집어서 연산을 하면 output특정 픽셀에 대한 결과를 convolution한 번 한것과 같은 연산 노력이 들어감.
 
@@ -143,9 +135,9 @@ convolution은 한 픽셀의 값을 결정 할 때 주변 픽셀들이 영향을
 ## Denoising
 :노이즈 제거하는 것
 
-여러 프레임 캡쳐 후 노이즈 제거하는방법 어려움(여러 프레임 평균)
+<u>여러 프레임</u> 캡쳐 후 노이즈 제거하는방법 어려움(여러 프레임 평균)
 
-따라서 싱글 이미지로 해결하는 방법 찾고자 함.(한 이미지의 주변 픽셀 평균)
+따라서 <u>싱글 이미지</u>로 해결하는 방법 찾고자 함.(한 이미지의 주변 픽셀 평균)
 
 평균내서 노이즈 제거 가능한데,   
 이를 convolution으로도 연산할 수 있음
