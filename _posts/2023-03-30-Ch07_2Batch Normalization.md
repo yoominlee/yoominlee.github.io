@@ -35,10 +35,10 @@ hyperparameter 빨리 업데이트할 수 있음
 
 + y(레이블)도 마찬가지로 동일한 크기로 나누는거 잊지말기
 
-표기 알아두기
+표기 알아두기   
 $x^{(i)}$ : ()소괄호는 training #   
 $z^{[l]}$ : []대괄호는 layer #   
-$X^{{t}}, Y^{{t}}$ : {}중괄호는 mini-batch #
+$X^{\{t\}}, Y^{\{t\}}$ : {}중괄호는 mini-batch #
 
 
 #### One epoch
@@ -62,16 +62,21 @@ $\therefore$ 1000개에겐 gradient 감소지만 이후 1000개에겐 증가하�
 
 noisy 하지만 크게 봤을 땐 감소하는 방향
 
+![2][2]  
+이를 코드로 표현하면 위와 같음.   
+기존의 하던 순전파, cost 계산, 역전파를 batch 크기의 데이터로 업데이트 후 batch 개수만큼 반복.
+
+
 #### Choosing your mini-batch size
 
-![2][2]  
+![3][3]  
 
 mini-batch size가,    
 너무 작으면 -> 너무 noisy
 너무 크면 -> 오래걸림    
 중간크기가 best
 
-![3][3]  
+![4][4]  
 
 위 이미지에서 x표시 한 곳에서 학습 시작한다면, $M_{L}$ 로 수렴. ( $M_{G}$ 로 와야 하는데)   
 하지만 Mini-batch 사용한다면, 가끔은 운좋게 Local에서 빠져나와  $M_{G}$ 로 갈수도 O
@@ -82,7 +87,7 @@ Training set이 작다면 mini-batch가 아닌 그냥 batch gradient descent를 
 mini-batch사이즈는:   
 -> 64($2^{6}$), 128($2^{7}$), 256($2^{8}$), 512($2^{9}$), 1024($2^{10}$), ...   
 2의 n승 크기로 보통 나눔. 
-그래야 메모리에 더 잘 fit,   
+그래야 메모리에 더 잘 fit, ~~(드라마틱 하진 않지만 관례)~~   
 
 
 
@@ -101,6 +106,62 @@ input이 아닌 $a^{[l]}$ normalize할 수 없나?
 하지만 경험적으로 Z가 더 나았다.   
 $\therefore$ 요즘 보통 z normalize  
 
+![5][5]
+
+아직 어떤 값으로 정규화를 시켜줄 것인가에 대한 문제가 있음   
+평균이 0인게 좋을수도 있지만 0.7이 나을수도 있고,,
+분산도 2가 좋을수도 있고 1.5가 좋을수도 있고,,   
+이렇기 때문에 mean과 variance도 trainable한 파라미터로 설정.   
+$\beta:$ 평균 mean   
+$\gamma:$ 분산 variance
+
+위 이미지의 우측은 Normalization이 필요 없는 경우를 의미.   
+학습이 끝나고 $\gamma, \beta$가 저런 값이 나왔다면 normalization이 필요없다는 의미.   
+
+추가적으로, 최종 z값은 $z_{norm}$이 아니고 $\tilde{z}$ (tilde 붙은 것)
+
+### Adding Batch Norm to a network
+batch norm은 보통 output layer를 제외한 레이어에 적용한다.(당연한 얘기겠지만 output결과를 바꾸니까)    
+
+W, b뿐만 아니라 $\gamma$ $\beta$  도 업데이트 해야 함.
+
+gradient decent 사용할 수 있음.
+
+![6][6]
+
+(실제로 굉장히 많이 쓰기 때문에 하단과 같이 제공됨)
+tf.nn.batch_normalization
+torch.nn.modules.batchnorm
+
+
+### Working with mini-batches 
+
+- $\gamma$와 $\beta$는 각 mini-batch에서 공유.
+
+batch wise가 아닌 mini-batch 단위로 학습하는 경우,   
+평균이랑 분산 값도 각 mini-batch에서 구해야 함.(당연한 말임)
+
+하지만 <u> $\gamma$와 $\beta$는 각 mini-batch에서 공유. </u>
+
+(-> 이부분 살짝 헷갈렸었는데, W랑 b업데이트 하듯이 생각하면 됨. 결국 Weight도 순전파 mini-batch단위로 하지만 각 batch에서 공유되는 값이니까)
+
+
+- trainable parameter w b $\gamma$ $\beta$ -> w $\gamma$ $\beta$
+
+![7][7]
+
+$\beta$와 b는 역할이 같음. 따라서 batch normalization 진행 시 b를 더할 필요 없음
+
+shift mean이라는 같은 역할하기 때문
+
+$\beta$가 아닌 b를 없앤 이유:   
+정규화 이후에 shift하고싶기 때문
+
+
+feature normalization의 핵심은,  
+training! training 동안 $\beta$ $\gamma$ 를 찾는것!
+
+input을 normalize함으로써 better 
 
 
 
@@ -111,22 +172,22 @@ $\therefore$ 요즘 보통 z normalize
 
 
 
+---
 
 
+[1]: /assets/images/post_img/2023-03-30-Ch07_2BatchNormalization/1.jpg
+[2]: /assets/images/post_img/2023-03-30-Ch07_2BatchNormalization/2.jpg
+[3]: /assets/images/post_img/2023-03-30-Ch07_2BatchNormalization/3.jpg
+[4]: /assets/images/post_img/2023-03-30-Ch07_2BatchNormalization/4.jpg
+[5]: /assets/images/post_img/2023-03-30-Ch07_2BatchNormalization/5.jpg
+[6]: /assets/images/post_img/2023-03-30-Ch07_2BatchNormalization/6.jpg
 
-
-
-
-[1]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/1.jpg?raw=true
-[2]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/2.jpg?raw=true
-[3]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/3.jpg?raw=true
-[4]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/4.jpg?raw=true
-[5]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/5.jpg?raw=true
-[6]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/6.jpg?raw=true
-[7]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/7.jpg?raw=true
-[8]: https://github.com/yoominlee/img/blob/main/2023-03-27-Ch07_1Problem%20Settings/8.jpg?raw=true
-
-
+[7]: /assets/images/post_img/2023-03-30-Ch07_2BatchNormalization/7.jpg
+[8]: /assets/images/post_img/2023-03-30-Ch07_2BatchNormalization/8.jpg
+[9]: /assets/images/post_img/2023-03-30-Ch07_2BatchNormalization/9.jpg
+[10]: /assets/images/post_img/2023-03-30-Ch07_2BatchNormalization/10.jpg
+[11]: /assets/images/post_img/2023-03-30-Ch07_2BatchNormalization/11.jpg
+[12]: /assets/images/post_img/2023-03-30-Ch07_2BatchNormalization/12.jpg
 
 출처1 : 2023-1 ITE4052 수업  
 [출처2](https://lsjsj92.tistory.com/391)   
