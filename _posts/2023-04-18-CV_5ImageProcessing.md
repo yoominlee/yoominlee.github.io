@@ -36,9 +36,7 @@ $u_2 = v + n_2$ 이런식으로 이루어져있음
 
 ![1][1]
 
-PSNR ⁉️❓
-
-추가 필요
+> PSNR 추가 필요
 
 ## Linear Filterig(Convolution)
 
@@ -107,8 +105,6 @@ smoothing 하는 동안 blurring 되는 것을 막기 위해
 mean filter로는 사각형 area에서 평균을 내는 것
 
 directional smoothing은 대각선 방향
-
-⁉️❓ 저 범위를 평균 내는 것?
 
 효과
 
@@ -194,7 +190,7 @@ pixel의 gradient를 계산해서 edge를 얻는 필터이다!
     - 히스토그램 : 이미지의 밝기 레벨에 따른 frequency of occurrence
     - 목표는 히스토그램을 uniform 한 분포로 만드는 것.
     - << 증명 부분 >>
-    - ⁉️❓ 다시 보기!!! 증명 부분 찾아보기,,
+    - ⁉️❓ 증명 부분 다시 보기!!!
 
 ---
 

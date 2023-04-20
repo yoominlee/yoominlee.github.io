@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ITE4053_DL> 08 OptimizationAlgorithms
+title: -----DRAFT-----ITE4053_DL> 08 OptimizationAlgorithms
 subtitle: 
 categories: DeepLearning
 tags: [DeepLearning, ITE4053]
@@ -59,7 +59,7 @@ $\beta$값으로는 0.9 많이 씀.
 위 그림과 같이 찌그러진 경우 업데이트 할 때 수직이 아닌 수평방향으로의 이동이 중요하다. $\therefore$ 수직방향으로 탐색 $\downarrow$, 수평방향으로 더 이동.
 
 
-
+## ADAM
 
 
 
