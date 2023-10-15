@@ -1,6 +1,6 @@
 ---
 layout: post
-title: -----DRAFT-----ITE4053_DL> 08 OptimizationAlgorithms
+title: ITE4053_DL> 08 OptimizationAlgorithms
 subtitle: 
 categories: DeepLearning
 tags: [DeepLearning, ITE4053]
