@@ -60,61 +60,32 @@ $\beta$값으로는 0.9 많이 씀.
 
 
 ## ADAM
+: 최근 많이 사용. Gradient & RMS 둘 다 사용
+
+$v_{dW} = \beta_1 v_{dW} + (1-\beta_1)dW,$  $v_{db} = \beta_1 v_{db} + (1-\beta_1)db$   
+$S_{dW} = \beta_2 S_{dW} + (1-\beta_2)dW^2,$  $S_{db} = \beta_2 S_{db} + (1-\beta_2)db^2$
 
 
+$v_{dW}^{corrected} = v_{dW}/(1-\beta_1^t),$  $v_{db}^{corrected} = v_{db}/(1-\beta_1^t)$    
+$S_{dW}^{corrected} = S_{dW}/(1-\beta_2^t),$  $S_{db}^{corrected} = S_{db}/(1-\beta_2^t)$ 
+
+$W:= W-\alpha\dfrac{v_{dW}^{corrected}}{\sqrt{S_{dW}^{corrected}+\epsilon}}$    
+$b:= b-\alpha\dfrac{v_{db}^{corrected}}{\sqrt{S_{db}^{corrected}+\epsilon}}$
 
 
+## Hyperparameters choice
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$\alpha$ : needs to be tuned   
+$\beta_1$ : 0.9(weighted average for $dW$)  
+$\beta_2$ : 0.999(weighted average for $dW^2$)  
+$\epsilon$ : $10^{-8}$
 
 
 ---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+(생략)   
+learning rate decay  
+problems of plateaus
 
 ---
 
