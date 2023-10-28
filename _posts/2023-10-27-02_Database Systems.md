@@ -6,6 +6,7 @@ categories: Database
 tags: [DB, ITE2038]
 use_math: true
 ---
+
 Contents
 - Relational Model + Schema
 - Declarative Queries
@@ -17,6 +18,7 @@ Contents
 ---
 
 # What is a database?
+
 - structured data collection   
     - Records
     - Relationships

@@ -7,15 +7,24 @@ tags: [DB, ITE2038]
 use_math: true
 ---
 
-Contents
-- Relational Model + Schema
-- Declarative Queries
-- Query Optimization
-- Efficient access and updates to data
-    - Recoverability
-    - Consistency
+Key ideas :    
+Relational vs Other Data Models   
+Advanced SQL
 
-&nbsp;
+---
+
+
+Contents:   
+- Data models + history
+    - Hierarchical (IMS/DL1) - 1960's
+    - Network (CODASYL) - 1970's
+    - Relational - 1970's and beyond
+
+- Key ideas
+    - Data redundancy(and how to avoid it)
+    - Physical and logical data independence
+    - Relational algebra and axioms
+
 
 # What is a database?
 
