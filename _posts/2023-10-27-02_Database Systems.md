@@ -17,7 +17,7 @@ Contents
 
 ---
 
-# What is a database?
+## What is a database?
 
 - structured data collection   
     - Records
@@ -36,10 +36,10 @@ big data의 real-time querying & visualization을 위해 GPU 사용
 *(디테일 생략)*
 
 
-## Zoo data
+### Zoo data
 추후에 예시로 종종 사용예정
 
-### Zoo website features
+#### Zoo website features
 - Admin interfac
     - Edit
     - Add an animal
@@ -48,7 +48,7 @@ big data의 real-time querying & visualization을 위해 GPU 사용
 - Zookeeper
     - Feed times
 
-### entity relationship diagram
+#### entity relationship diagram
 
 ![1][1]
 
@@ -58,23 +58,23 @@ big data의 real-time querying & visualization을 위해 GPU 사용
 <u>relation조차 entity로 표현 (foreign key로 연결)</u>
 
 
-### 더 고전적인 relation 나타내는 방법
-#### Hierarchy & Graph
+#### 더 고전적인 relation 나타내는 방법
+##### Hierarchy & Graph
 ![3][3]
 
 > data 정규화 하는 이유: 중복 최대한 피하고자   
 (추후에 다룸)
 
-# SQL - Structured Query Language
+## SQL - Structured Query Language
 : 질의를 하는 언어
 
-### 가장 기본적인 format:
+#### 가장 기본적인 format:
 ```sql
 SELECT field1, ... ,fieldM
 FROM table1, ...    -- 읽어올 대상이 되는 table
 WHERE condition1, ...
 ```
-### 값 추가: 
+#### 값 추가: 
 ```sql
 INSERT INTO table VALUES (field1, ...)
 
@@ -87,13 +87,13 @@ insert into keeper values (1,'Jenny');
 insert into keeper values (2, 'Joe);
 ```
 
-### 값 수정:
+#### 값 수정:
 ```sql
 UPDATE table SET field1 = x, ...
 WHERE condition1, ...
 ```
 
-## Declarative Queries
+### Declarative Queries
 
 - imparative VS declarative
     - Imparative = 명령적, 절차적   
@@ -142,7 +142,7 @@ WHERE condition1, ...
         WHERE a.cageno = c.no AND c.bldg = 32
         ```
 
-## Query examples 
+### Query examples 
 
 - 곰 나이의 평균
 ```sql
@@ -215,9 +215,3 @@ SQL 쿼리에 대한 여러 후보 plan (Procedual Plan)
 [5]: /assets/images/post_img/2023-10-27-02_DatabaseSystems/5.png
 
 출처 : 2023-2 ITE2038 수업  
-
-
-
-
-
-
