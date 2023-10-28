@@ -14,6 +14,8 @@ Contents
     - Recoverability
     - Consistency
 
+---
+
 # What is a database?
 - structured data collection   
     - Records
@@ -65,26 +67,26 @@ big data의 real-time querying & visualization을 위해 GPU 사용
 : 질의를 하는 언어
 
 ### 가장 기본적인 format:
-```
+```sql
 SELECT field1, ... ,fieldM
 FROM table1, ...    -- 읽어올 대상이 되는 table
 WHERE condition1, ...
 ```
 ### 값 추가: 
-```
+```sql
 INSERT INTO table VALUES (field1, ...)
 
 ```
 -> 괄호 안이 값
 
 ex)
-```
+```sql
 insert into keeper values (1,'Jenny');
 insert into keeper values (2, 'Joe);
 ```
 
 ### 값 수정:
-```
+```sql
 UPDATE table SET field1 = x, ...
 WHERE condition1, ...
 ```
@@ -95,7 +97,7 @@ WHERE condition1, ...
     - Imparative = 명령적, 절차적   
      C, Java, Python 등. 시키는 것만 함   
      (nested loops)
-    ```
+    ```sql
     for each row r in animals 
         if r.species = 'giraffe'
             output r.name
@@ -106,7 +108,7 @@ WHERE condition1, ...
     어떻게 해야하는지 명시 X, 뭘 해야하는지만 명시 O   
     (join)
 
-    ```
+    ```sql
     SELECT r.name FROM animals
     WHERE r.species = 'giraffe'
     ```
@@ -114,26 +116,26 @@ WHERE condition1, ...
 - 코드로 비교    
     - <u>종이 기린인 모든 동물의 이름 출력</u>
         - Imparatives
-        ```
+        ```python
         for each row r in 'animals'
             if r.species = 'giraffe'
                 output r.name
         ```
         - Declarative
-        ```
+        ```sql
         SELECT r.name FROM animals
         WHERE r.species = 'giraffe'
         ```
     - <u>Building32의 모든 cage</u>
         - Imparative
-        ```
+        ```python
         for each row a in animals
             for each row c in cages
                 if a.cageno = c.no and c.bldg = 32
                     output a
         ```
         - Declarative
-        ```
+        ```sql
         SELECT a.name FROM animals AS a, cages AS c
         WHERE a.cageno = c.no AND c.bldg = 32
         ```
@@ -141,13 +143,13 @@ WHERE condition1, ...
 ## Query examples 
 
 - 곰 나이의 평균
-```
+```sql
 SELECT AVG(age) FROM animals
 WHERE species = 'bear'
 ```
 \<Complex Queries>
 - 한살 이상의, 같은 종의 암수의 쌍 출력
-```
+```sql
 SELECT a1.name, a2.name                 -- 4) 한 쌍
 FROM animals as a1, animals as a2
 WHERE a1.gender = M and a2.gender = F   -- 3) 암수
@@ -159,7 +161,7 @@ animal table은 1개인데, 2개인것처럼 연결하는 것
 
 - 평균적으로 밥 먹는 (feed time)시간보다 늦는 salamander 종인 동물
 
-```
+```sql
 SELECT  cages.cageid FROM cages, animals
 WHERE animals.species = 'salamander'
 AND animals.cageid = cages.cageid
@@ -170,7 +172,7 @@ AND cages.feedtime>
 한 테이블에 결과 추린 후 그 table에 다시 질문한 것
 
 - student와 salamander를 동시에 관리하는 keeper
-```
+```sql
 SELECT keeper.name
 FROM keeper, cages as c1, cages as c2,
     keeps as k1, keeps as k2, animals as a1, animals as a2
