@@ -15,7 +15,6 @@ Contents
     - Recoverability
     - Consistency
 
----
 &nbsp;
 
 # What is a database?
