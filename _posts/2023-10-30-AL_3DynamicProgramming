@@ -24,146 +24,130 @@ Contents
 ☑️ Longest common subsequence   
 ➖ Matrix-chain multiplication
 
-### Longest common subsequence
+## Longest common subsequence
+
+### 문제 정의
 최장 공통 부분 문자열   
-- substring : 연속된 부분 문자열
-- subsequence : 연속적이지는 않은 부분 문자열
+- substring : 연속된 부분 문자열   
+ex) CBD는 AB<u>CBD</u>AB 의 substring
+- subsequence : 연속적이지는 않은 부분 문자열   
+ex) BCDB는 A<u>BC</u>B<u>D</u>A<u>B</u> 의 subsequence
+
+2개의 string을 비교,   
+- common subsequence
+BCA는 X=A<u>BC</u>BD<u>A</u>B와 Y=<u>B</u>D<u>CA</u>BA 의 common subsequence
+
+- longest common subsequence (LCS)
 
 
+X = A <u>B C B</u> D <u>A</u> B   
+Y = <u>B</u> D <u>C</u> A <u>B A</u>
+
+위의 경우, X와 Y의 longest common subsequence는 BCBA
+
+### Brute force approach
+- X의 모든 subsequence 경우의 수가 Y의 subsequence인지 하나씩 확인 후 그 중 가장 긴 것 선택
+- 불가: X의 subsequence개수는 $2^m$개
 
 
+### Dynamic programming
+#### 정의
+X의 $i$째 prefix $X_i$는, $X_i=x_1,x_2 ... x_i$ 
+
+만약 X = ABCB라면,   
+- $X_4$ = ABCB   
+- $X_0$ = 
 
 
+1: $x_m=y_n$이면, $z_k=x_m=y_n$. 그리고 $Z_k-1$ 은 $X_{m-1}$과$Y_{n-1}$의 LCS
+
+X = A B C B D A <u>B</u>    
+Y = B> D C A <u>B</u>
+
+2: $x_m\neq y_n$이면, Z는 $X_{m-1}$과 $Y$ 혹은 $X$와 $Y_{n-1}$의 LCS이다.
 
 
+C[i][j]는 sequence $X_i$와 $Y_j$의 LCS
 
-
-
-
-
-
-
-
-
-막대기 갈라서 파는 경우.   
-n의 길이의 rod와 $i$의 길이 별 가격 table $p_i$가 있을 때 rod 잘라 벌 수 있는 최대 수익 $r_n$ 구하기   
-(= 길이 n인 경우 돈 가장 많이 벌기 위해 어떻게?)
 
 ![1][1]
 
+i=0 또는 j=0인 경우 0,   
+$x_m, y_n$ 같다면 이전 CLS 길이에 +1,    
+다르다면 위($c[i-1][j]$)와 왼쪽($c[i][j-1]$)값 중 큰값이 오게 된다.
 
-#### naive한 방법
 ![2][2]
-- 모든 가능한 방법을 계산(가능한 모든 경우의 수 탐색) 후 가장 빠른 길을 찾음
-- 단순히 $2^3$ 아님 ($\because$ e,f,g는 동일)   
+
+
+#### multiple LSCs
 
 ![3][3]
 
-=> $r_n=max_{1\leq i\leq n}(p_i+r_{n-i})$
-
->DP 핵심:   
-풀고자 하는 문제 recurrence로 정의 가능한가?   
-위의 수식도 recurrence로 풀되, 작은 것 찾아갈 때 값 기억해 두는 것.   
-
-![4][4]
-
-![5][5]
-
-$r[i]$가 assembly line의 table $s$
-
-$i$가 9인 경우, 가능한 p[j] + r[i-j]경우는, 
-```
-p[1] + r[8]
-p[2] + r[7]
-p[3] + r[6]
-...
-p[9] + r[0]
-```
-이 중 p\[3]+r\[6]이 최대.   
-또한 r\[6]은 또 분할 될 수 O(p아닌 r이어서)   
--> 매번 구하기 귀찮다면 **기록**해 두면 됨
-
-최대가 되는 값 어떤것 선택한건지는 하나씩 비교해 보면 알 수 O
-
-![6][6]
-
-$s[i]$는 어딜 잘라서 최대 revinue 얻었는지 표기
-
-$i$가 5인 경우, p\[2]+r\[3]    
-\- \- | \- \- \-    
--> 자르는 위치는 2
-<br><br>
-
-$i$가 9인 경우, p\[3]+r\[6]    
-\- \- \- | \- \- \- \- \- \-    
--> 자르는 위치는 3   
-(다시 r\[6] 가야함)
+위의 표와 같이 여러 경로를 통해 같은길이의 LCS가 여럿 나올 수 있다.
 
 #### pseudo code
-
-```python
-EXTENDED-BOTTOM-UP-CUT-ROD(p,n)
-    let r[0..n] and s[0..n] be new arrays
-    r[0] = 0
-    for j = 1 to n
-        q = -∞ # 지금까지 중 최댓값 기록하는 변수
-        for i = 1 to j
-            if q < p[i] + r[j-i]
-                q = p[i] + r[j-i] # q보다 크면 update
-                s[j] = i # update 시 i값 s에 기록해두기
-        r[j] = q # 최댓값인 q를 r에 기록
-    return r and s
+```c
+LCS-LENGTH (X, Y)
+    m = X.length
+    n = Y.length
+    let b[1 .. m][1 .. n] and c[0 .. m][0 .. n] be new tables
+    for i= 1 to m 
+        c[i][0] = 0
+    for j= 0 to n
+        c[0][j] = 0 
+    for i= 1 to m
+        for j= 1 to n
+            if xi== yj
+                c[i][j] = c[i−1][j−1] +1
+                b[i][j] = "↖"
+            elseif c[i−1][j] ≥ c[i][j−1]
+                c[i][j] = c[i−1][j]
+                b[i][j] = "↑"
+            else c[i][j] = c[i][j−1]
+                b[i][j] = "←"
+                return c and b
 ```
-=> $ \theta(n^2)$
 
-```python
-PRINT-CUT-ROD-SOLUTION(p,n) # 길이가 9인 경우,
-    (r,s) = EXTENDED-BOTTOM-UP-CUT-ROD(p,n)
-    while n > 0
-        print s[n] # 3 출력,
-        n = n -s[n] # n=6으로 다시(r[6])
+```c
+PRINT-LCS (b, X, i,j)
+    if i==0 or j==0
+        return 
+    if b[i][j] =="↖"
+        PRINT-LCS (b, X, i−1, j−1)
+        print xi
+    elseif b[i][j] =="↑"
+        PRINT-LCS (b, X, i−1, j)
+    else PRINT-LCS (b, X, i, j−1)
 ```
-=> $ O(n)$ : 최악의 경우 1개 씩. 최대 n번
 
-#### Space consumption
-- $\theta(n)$ 
+#### space consumption
+$\theta(mn)$
 
+#### time consumption
+$\theta(mn)$
 
-#### Running time
-- $\theta(n^2)$
-- 1+2+3+4+ ... +n = n(n+1)/2
-
-
-> DP에서 시간복잡도 구할 때,(위 pseudo code 참고)   
-r[i]한 칸 채우는데 얼마나 걸리는지 보면 됨   
-j를 채울 때 (1,j-1), (2,j-2), ... j 개의 pair를 봐야 함   
-$\sum_jj$ &nbsp; &nbsp; $\therefore n^2$에 비례 
-
-
-#### assembly-line scheduling 처럼 table r을 table s로 줄일 수 있나?
-
-
-
-
+#### space reduction
+$\theta(min(m,n))$   
+(LCS length only)
 
 
 ||Space|Time|
 |:---:|:---:|:---:|
 |Assembly-line scheduling|$\theta(n)$|$\theta(n)$|
 |Rod cutting|$\theta(n)$|$\theta(n^2)$|
-|Longest common subsequence|||
+|Longest common subsequence|$\theta(mn)$</br>$\theta(n^2)$|$\theta(mn)$</br>$\theta(n^2)$|
 |Matrix-chain multiplication|||
 
 
 
 ---
 
-[1]: /assets/images/post_img/2023-10-30-AL_DynamicProgramming2/1.png
-[2]: /assets/images/post_img/2023-10-30-AL_DynamicProgramming2/2.png
-[3]: /assets/images/post_img/2023-10-30-AL_DynamicProgramming2/3.png
-[4]: /assets/images/post_img/2023-10-30-AL_DynamicProgramming2/4.png
-[5]: /assets/images/post_img/2023-10-30-AL_DynamicProgramming2/5.png
-[6]: /assets/images/post_img/2023-10-30-AL_DynamicProgramming2/6.png
+[1]: /assets/images/post_img/2023-10-30-AL_DynamicProgramming3/1.png
+[2]: /assets/images/post_img/2023-10-30-AL_DynamicProgramming3/2.png
+[3]: /assets/images/post_img/2023-10-30-AL_DynamicProgramming3/3.png
+[4]: /assets/images/post_img/2023-10-30-AL_DynamicProgramming3/4.png
+[5]: /assets/images/post_img/2023-10-30-AL_DynamicProgramming3/5.png
+[6]: /assets/images/post_img/2023-10-30-AL_DynamicProgramming3/6.png
 
 출처 : 2023-2 ITE2039 수업  
 
