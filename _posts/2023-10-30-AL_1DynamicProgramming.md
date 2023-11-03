@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dynamic Programming) Assembly-line scheduling (1/4)
+title: Dynamic Programming_Assembly-line scheduling (1/4)
 subtitle: ITE2039 Algorithms and problem solving
 categories: Algorithm
 tags: [Algorithm, ITE2039]

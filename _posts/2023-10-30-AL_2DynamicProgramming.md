@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dynamic Programming) Rod cutting (2/4)
+title: Dynamic Programming_Rod cutting (2/4)
 subtitle: ITE2039 Algorithms and problem solving
 categories: Algorithm
 tags: [Algorithm, ITE2039]

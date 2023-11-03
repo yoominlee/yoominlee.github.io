@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dynamic Programming) Matrix-chain multiplication (4/4)
+title: Dynamic Programming_Matrix-chain multiplication (4/4)
 subtitle: ITE2039 Algorithms and problem solving
 categories: Algorithm
 tags: [Algorithm, ITE2039]
