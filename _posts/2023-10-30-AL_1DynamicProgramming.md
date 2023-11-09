@@ -37,13 +37,11 @@ Contents
 라인에 따라 시간 차이 있고, 다른 라인으로 넘어가는 데에는 시간 t가 존재.   
 
 
-방법1
-#### Brute-force approach
+#### 방법1: Brute-force approach
 - 모든 가능한 방법을 계산(가능한 모든 경우의 수 탐색) 후 가장 빠른 길을 찾음
 - $2^n$가지 방법이 있음: 너무 많음
 
-방법2
-#### Dynamic Programming
+#### 방법2: Dynamic Programming
 
 표를 사용하는 것  
 
@@ -167,4 +165,4 @@ PRINT-STATIONS(l,l*,n)
 
 출처 : 2023-2 ITE2039 수업  
 
-https://doorbw.tistory.com/42
+[참고:](https://doorbw.tistory.com/42) https://doorbw.tistory.com/42

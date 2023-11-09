@@ -94,7 +94,7 @@ n개의 행렬의 곱이 주어졌을 때, 최적의 괄호 묶는 방법은, k�
 
 
 
-
+<br/>
 
 
 
@@ -110,7 +110,8 @@ n개의 행렬의 곱이 주어졌을 때, 최적의 괄호 묶는 방법은, k�
 
 
 #### pseudo code
-```c
+
+``` c
 MATRIX-CHAIN-ORDER (p)
     n= p.length−1
     let m[1 .. n][1 .. n] and s[1 .. n−1][2 .. n] be new tables 
