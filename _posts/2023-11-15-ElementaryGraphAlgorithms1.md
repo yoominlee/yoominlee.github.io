@@ -193,31 +193,56 @@ Tree는 forest중에 connected 된 것
 - Adjacency-list representation
 - Adjacency-matrix representation
 #### Adjacency-list representation
-
-
-
-
-#23
-
-
-
-
-
-
-
-
 ![11][11]
+$\vert V\vert$ list에 대한 array.각각이 vertex   
+각 vertex마다 그것의 adjacent들 contain
+
+![12][12]
+undirected graph의 경우, directed version이 저장됨
+
+=> $\theta(V+E)$ space
 
 #### Adjacency-matrix representation
 
+![13][13]
+
+$\vert V\vert \times \vert V\vert$
+matrix : $\Theta (V^2)$
+
+Edge가 있으면 Entry$(i,j)$는 1, 없으면 0
+
+![14][14]
+
+undirected graph의 경우 main diagonal을 따라 대칭
+
+반쪽만 저장하는것도 충분함
 
 
 
+##### Adjacency-list representation, Adjacency-matrix representation 비교
+
+- Storage
+    - $G$가 sparse 하다면 adjacency list가 나음   
+    $\because \vert E \vert < \vert V\vert ^2$ 
+    - $G$가 dense 하다면 adjacency matrix가 더 나음   
+    $\because$ adjancy matrix는 한 entry당 한 bit 사용
+
+- Edge present test : edge $(i,j)$가 존재하는가?
+    - Adjacency matrix : $\Theta (1)$ time
+    - Adjacenty list : $O(V)$ time
+
+- Listing or visiting all edges
+    - Adjacency matrix : $\Theta (V^2)$ time
+    - Adjacenty list : $O(V+E)$ time
 
 
+##### Weight가 있는 Graph인경우
 
-#### Adjacency-list representation, Adjacency-matrix representation 비교
+![15][15]
+adjacent vertex와 weight를 함께 저장
 
+![16][16]
+matrix의 각 entry가 weight를 의미
 
 
 ---
