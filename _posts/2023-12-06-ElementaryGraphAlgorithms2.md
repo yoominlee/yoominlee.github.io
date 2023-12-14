@@ -129,12 +129,61 @@ Ex) 처음에 s있고, 탐색 시 s 빼줌. 새로운 adjacent인 r과 w를 만�
 
 ### Depth-first search
 
+#### Colors of vertices
+- 초기에 모든 노드는 ```WHITE``` (not discovered)
+- Discovered 되면 ```GRAY```
+- Adjacency가 전부 examined 되었다면 finish 된 것. 이는 ```BLACK```
 
+#### Timestamps
+각 vertex마다 두 timestamp가 있다
+- $v.d$ : discovery time (gray 될때)
+- $v.f$ : finishing time (black 될때)
+
+![7][7]
+
+#### Pseudo code
 
 ```
-✏️ 
+DFS(G)
+1   for each vertex u ∈ G.V
+2       u.color = WHITE
+3       u.π = NIL
+4   time= 0
+5   for each vertex u ∈G.V
+6       if u.color == WHITE
+7           DFS-VISIT(G,u)
+
+DFS-VISIT(G,u)
+1   time= time + 1
+2   u.d = time
+3   u.color= GRAY
+4   for each v ∈ G.Adj[u]
+5       ifv.color == WHITE
+6           v.π = u
+7           DFS-VISIT(G,v)
+8   u.color = BLACK
+9   time=time+ 1
+10  u.f= time
 ```
 
+#### Running time
+
+pseudo code에서,  
+
+```DFS(G): line1~4``` -> Initialization   
+: $\Theta (V)$
+
+```DFS(G): line5~7``` -> Graph Exploration   
+: $\Theta (V+E)$
+
+```DFS-VISIT(G,u)```   
+: $\Theta (E)$
+
+
+```Total``` => $\Theta(V+E)$
+
+
+(디테일들 많이 SKIP)
 
 
 ---

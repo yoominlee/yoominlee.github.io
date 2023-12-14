@@ -206,7 +206,7 @@ MST-PRIM(G, w, r) # line 1
 최악의경우 edge수 만큼.    
 -> $O(e\cdot lgn)$
 
-$\therefore O((|V|+|E|)\cdot lg|V|)$ 
+$\therefore O((\vert V\vert +\vert E\vert ) \cdot lg\vert V\vert )$ 
 
 edge 수 항상 더 많기 때문에    
 $O(|E|\cdot lg|V|)$ 
