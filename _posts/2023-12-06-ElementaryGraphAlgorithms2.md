@@ -71,12 +71,12 @@ $u.\pi = t$
 - G의 Predecessor subgraph    
 = $ G_\pi= (V_\pi, E_\pi)$   
 
-    - $V_\pi= \{v ∈V | v.\pi≠ NIL\}$ $ U \{ s\}$
+    - $V_\pi= \{v ∈V \vert v.\pi≠ NIL\}$ $ U \{ s\}$
 
-    - $E_\pi= \{(v.π, v) | v ∈V_\pi-\{s\}\}$
+    - $E_\pi= \{(v.π, v) \vert v ∈V_\pi-\{s\}\}$
 
     - predecessor subgraph $G_\pi$는 **breadth-first tree**
-        - $\because$ 연결되어있고 $|E_\pi|=|V_\pi|-1$
+        - $\because$ 연결되어있고 $\vert E_\pi\vert =\vert V_\pi\vert -1$
         - $E_\pi$의 edge들은 **tree edges** 라고 불림
 
 ```

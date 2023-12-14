@@ -159,7 +159,7 @@ predecessor update
 ##### 모든 노드에 대해 위와 같은 과정 반복
 
 
-$\Pi^{(k)}_{ij}\begin{Bmatrix}\Pi^{(k-1)}_{ij}\;\; if\;\; d^{k-1}_{ij}\leq d^{k-1}_{ik}+d^{k-1}_{kj}\\ \Pi^{(k-1)}_{kj}\;\; if \;\; d^{k-1}_{ij}\leq d^{k-1}_{ik}+d^{k-1}_{kj} \end{Bmatrix}$
+$\Pi^{(k)}_{ij}\begin{Bmatrix}\Pi^{(k-1)}_{ij} \;\; if\;\; d^{k-1}_{ij}\leq d^{k-1}_{ik}+d^{k-1}_{kj}\\ \Pi^{(k-1)}_{kj} \;\; if \;\; d^{k-1}_{ij}\leq d^{k-1}_{ik}+d^{k-1}_{kj} \end{Bmatrix}$
 > 위 수식 중 윗줄은 기존 값이 k노드 지나는 경로값 보다 작아 update 되지 않는 경우   
 아랫줄은 노드 k지나는 것이 더 작은 값으로 update 시키는 경우를 의미
 
@@ -176,7 +176,7 @@ $
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let $D(k)=  (𝑑^{(k)}_{ij})$ be a new $n \times n$ matrix   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for $i= 1$ to $n$   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for $j = 1$ to $n$   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$d^{(k)}_{ij} = min(d^{(k-1)}_{ij}, d^{(k-1)}_{ik}+d^{(k-1)}_{kj})$  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $d^{(k)}_{ij} = min(d^{(k-1)}_{ij}, d^{(k-1)}_{ik}+d^{(k-1)}_{kj})$    
 &nbsp;&nbsp;&nbsp;&nbsp;return $D(n)$
 
 
