@@ -152,6 +152,7 @@ yat:
 #   - categories.html
 #   - tags.html
 #   - about.md
+
 header_pages:
   - about.html
   # - archives.html
@@ -159,10 +160,6 @@ header_pages:
   - home.html
   # - tags.html
   - studio.html
-  # 하단 세개는 불가?
-  # - articles.html
-  # - index.html
-  # - framework.html
 
 # Page default value
 # defaults:
