@@ -154,14 +154,19 @@ yat:
 #   - about.md
 header_pages:
   - about.html
-  - archives.html
+  # - archives.html
   - categories.html
   - home.html
-  - tags.html
+  # - tags.html
   - studio.html
   - articles.html
+  - index.html
   - framework.html
-  - /_layouts/framework.html
+  -
+    scope:
+      path: ""
+    values:
+      category: "photo"
 
 # Page default value
 # defaults:
