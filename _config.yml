@@ -152,6 +152,16 @@ yat:
 #   - categories.html
 #   - tags.html
 #   - about.md
+header_pages:
+  - about.html
+  - archives.html
+  - categories.html
+  - home.html
+  - tags.html
+  - studio.html
+  - articles.html
+  - framework.html
+  - /_layouts/framework.html
 
 # Page default value
 # defaults:
