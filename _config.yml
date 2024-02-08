@@ -155,11 +155,11 @@ yat:
 
 header_pages:
   - about.html
-  # - archives.html
+  - archives.html
   - categories.html
   - home.html
   # - tags.html
-  - studio.html
+  # - studio.html
 
 # Page default value
 # defaults:
