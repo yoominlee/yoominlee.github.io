@@ -1,5 +1,13 @@
-*.gem
-.bundle
-.sass-cache
-_site
-Gemfile.lock
+# Jekyll build & cache
+/_site
+/.jekyll-cache
+/.jekyll-metadata
+/.sass-cache
+
+# Bundler & deps
+/vendor
+/.bundle
+/node_modules
+
+# OS noise
+.DS_Store
