@@ -1,14 +1,18 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - yoominlee
+  # - alshedivat
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  # - alshedivat/al-folio
+  # - jekyll/jekyll
+  # - twbs/bootstrap
+  # - jquery/jquery
+  # - FortAwesome/Font-Awesome
+  # - mathjax/MathJax
+  # - jpswalsh/academicons
+  - yoominlee/Apriori_algorithm
+  - yoominlee/Clustering_DBSCAN
+  - yoominlee/LC2K_assembler
+  - yoominlee/LC2K_simulator
