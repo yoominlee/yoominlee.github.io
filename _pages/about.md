@@ -6,7 +6,7 @@ subtitle: <a href="mailto:yoomin0104@gmail.com">mail</a> | <a href="https://gith
 
 profile:
   align: right
-  image: about/ym3.jpg
+  image: ym3.jpg
   image_circular: false # crops the image to make it circular
   # more_info: <p>Los Angeles, CA</p> # >
   #   # <p>555 your office number</p>
