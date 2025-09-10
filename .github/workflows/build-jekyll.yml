@@ -1,33 +1,65 @@
-name: Github Pages
+# .github/workflows/build-deploy.yml
+name: Build & Deploy (Jekyll + ImageMagick)
 
 on:
   push:
-    branches:
-      - master  # Here source code branch is `master`, it could be other branch
+    branches: [ "main", "master" ]  # 기본(main), 과거 레포면 master도 커버
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
-  build_and_deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      # Use GitHub Actions' cache to cache dependencies on servers
-      - uses: actions/cache@v1
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
+          # al-folio 서브모듈(있는 경우)까지 함께 체크아웃
+          submodules: true
+          fetch-depth: 0
 
-      # Use GitHub Deploy Action to build and deploy to Github
-      - uses: jeffreytse/jekyll-deploy-action@master
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          provider: 'github'
-          token: ${{ secrets.GITHUB_TOKEN }} # It's your Personal Access Token(PAT)
-          repository: ''             # Default is current repository
-          branch: 'gh-pages'         # Default is gh-pages for github provider
-          jekyll_src: './'           # Default is root directory
-          jekyll_cfg: '_config.yml'  # Default is _config.yml
-          jekyll_baseurl: '/jekyll-theme-yat'  # Default is empty
-          cname: ''                  # Default is to not use a cname
-          actor: ''                  # Default is the GITHUB_ACTOR
+          ruby-version: '3.2'
+          bundler-cache: true   # Gem 캐시 자동
+
+      - name: Install ImageMagick
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
+      # (선택) node 의존이 있으면 주석 해제
+      # - name: Setup Node
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: '20'
+
+      - name: Build site (JEKYLL_ENV=production)
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build --trace
+
+      - name: Upload artifact for Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
