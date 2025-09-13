@@ -28,7 +28,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I’m a first-year M.S. student in Computer Science (AI) at the University of Southern California. I work in computer vision and applied machine learning, with a focus on measurable quality/robustness and reliable, reproducible deployment. I’m especially interested in evaluation under distribution shift, data curation, and the engineering that turns promising models into dependable products.
+I’m a **first-year M.S. student in Computer Science (AI) at the University of Southern California**. I work in **computer vision** and **applied machine learning**, with a focus on **measurable quality/robustness** and **reliable, reproducible deployment**. I’m especially interested in **evaluation under distribution shift, data curation**, and the engineering that turns promising models into dependable products.
 
 Previously, I was a research member in the **AIoT Group at Seoul National University**, and an undergraduate researcher in the **Multimodal AI Lab at Hanyang University**; earlier, I interned at **COGA Robotics**. My projects have spanned sensor–model co-design for robust recognition, dataset design and protocol building, and hardening ML pipelines for real-world use.
 

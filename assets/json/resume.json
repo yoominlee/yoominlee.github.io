@@ -81,8 +81,8 @@
       "url": "https://example.com",
       "startDate": "2023-08-01",
       "endDate": "2024-12-01",
-      "summary": "Explored fine-grained visual recognition with multimodal priors (geography/language). Extended a CLIP/Transformer baseline to inject context and measured consistent gains across few-shot settings.",
-      "highlights": ["Relativity"]
+      "summary": "Explored fine-grained visual recognition with multimodal priors (geography/language). Extended a CLIP/Transformer baseline to inject context and measured consistent gains across few-shot settings."//,
+      // "highlights": ["Relativity"]
     },
     {
       "name": "COGA Robotics",
@@ -90,8 +90,8 @@
       "url": "https://example.com",
       "startDate": "2022-08-01",
       "endDate": "2023-02-01",
-      "summary": "Worked on indoor person-following: fused LiDAR and RGB-D in ROS, optimized Deep SORT on Jetson, and profiled perception latency to meet real-time constraints.",
-      "highlights": ["Relativity"]
+      "summary": "Worked on indoor person-following: fused LiDAR and RGB-D in ROS, optimized Deep SORT on Jetson, and profiled perception latency to meet real-time constraints."//,
+      // "highlights": ["Relativity"]
     }
   ],
   // "volunteer": [
@@ -308,7 +308,7 @@
   // ],
 
 
-  
+
   // "interests": [
   //   {
   //     "name": "Applied ML for Vision",
