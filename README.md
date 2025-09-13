@@ -1,5 +1,5 @@
-build `$`
-
+build `$bundle exec jekyll serve -l -H localhost`
+and use `http://localhost:4000/`
 
 
 - `assets/` : 이미지, pdf, js, css 등 정적 자산.
