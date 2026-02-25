@@ -32,8 +32,12 @@ I’m a *first-year M.S. student* in Computer Science (AI) at the <a href="https
 
 Previously, I was a research member in the AIoT Group at <a href="https://en.snu.ac.kr/index.html">Seoul National University</a>, and an undergraduate researcher in the Multimodal AI Lab at <a href="https://www.hanyang.ac.kr/web/eng">Hanyang University</a>; earlier, I worked at <a href="https://en.coga-robotics.com/">COGA Robotics</a>'s advanced R&D center as intern. My projects have spanned *sensor–model co-design* for robust recognition, *dataset design and protocol building*, and *hardening ML pipelines* for real-world use.
 
-I received a B.S. in *Computer Science & Interior Architecture Design* from Hanyang University. The design training sharpened my spatial reasoning and user-centered thinking, which I apply to building clear, reproducible ML baselines and fast demos.
+I received a B.S. in *Computer Science & Interior Architecture Design* from Hanyang University. The design training sharpened my spatial intuition and human-centered judgement, which I apply to building clear, reproducible ML baselines and fast demos.
 If you’d like to discuss practical ML or vision systems, feel free to reach out by email.
+
+<div style="text-align:center; margin-top: 2.5rem;">
+  <script type=’text/javascript’ id=’mapmyvisitors’ src=’https://mapmyvisitors.com/map.js?cl=f5ede2&w=300&t=n&d=1lGdALiaWil_FJ8UFkuPgJt9ZhrAAFsWKSxg74_8Jws&co=a6c0bf&cmo=a07d40&cmn=376275&ct=ffffff’></script>
+</div>
 
 
 
