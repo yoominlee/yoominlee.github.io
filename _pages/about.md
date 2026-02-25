@@ -35,9 +35,6 @@ Previously, I was a research member in the AIoT Group at <a href="https://en.snu
 I received a B.S. in *Computer Science & Interior Architecture Design* from Hanyang University. The design training sharpened my spatial intuition and human-centered judgement, which I apply to building clear, reproducible ML baselines and fast demos.
 If you’d like to discuss practical ML or vision systems, feel free to reach out by email.
 
-<div style="text-align:center; margin-top: 2.5rem;">
-  <script type=’text/javascript’ id=’mapmyvisitors’ src=’https://mapmyvisitors.com/map.js?cl=f5ede2&w=300&t=n&d=1lGdALiaWil_FJ8UFkuPgJt9ZhrAAFsWKSxg74_8Jws&co=a6c0bf&cmo=a07d40&cmn=376275&ct=ffffff’></script>
-</div>
 
 
 
