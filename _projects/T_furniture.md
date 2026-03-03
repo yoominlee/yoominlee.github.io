@@ -2,14 +2,14 @@
 layout: page
 title: Classifying Visually Similar Furniture
 description: End-to-end classification pipeline on a self-rendered 3D dataset — interior design domain knowledge translated directly into training data.
-img: assets/img/projects/W_6_furniture/cover.jpg
+img: assets/img/projects/T_furniture/cover.jpg
 importance: 6
-category: work
+category: tech
 tags: [TensorFlow, 3D Rendering, Dataset Design, Python]
-giscus_comments: false
+giscus_comments: true
 ---
 
-{% include figure.liquid path="assets/img/projects/W_6_furniture/dataset-grid.jpg" title="Self-rendered furniture dataset" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid path="assets/img/projects/T_furniture/dataset-grid.jpg" title="Self-rendered furniture dataset" class="img-fluid rounded z-depth-1" %}
 
 **Outcome.** Built a full classification pipeline from scratch — 3D modeling → rendering → TensorFlow training — achieving consistent accuracy gains through iterative model refinements on a self-created dataset.
 
@@ -25,7 +25,7 @@ I built the dataset using 3D modeling and rendering (SketchUp / Rhino), controll
 - **Multiple angles** per object to improve generalization
 - **Rigorous splits** to prevent leakage between visually similar categories
 
-{% include figure.liquid path="assets/img/projects/W_6_furniture/renders.jpg" title="Rendered samples from the self-created dataset" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid path="assets/img/projects/T_furniture/renders.jpg" title="Rendered samples from the self-created dataset" class="img-fluid rounded z-depth-1" %}
 
 ---
 

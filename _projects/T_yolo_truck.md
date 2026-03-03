@@ -2,15 +2,17 @@
 layout: page
 title: Truck Detection under Camera-Angle Domain Shift
 description: Adapting YOLO-based truck detection to stay robust across cameras at different positions and angles — tackling geometric domain shift.
-img: assets/img/projects/W_3_yolo_truck/cover.jpg
+img: assets/img/projects/T_yolo_truck/cover.jpg
 importance: 8
-category: work
+category: tech
 tags: [YOLO, Object Detection, Domain Adaptation, PyTorch]
 status: active
 giscus_comments: true
 ---
 
-{% include figure.liquid path="assets/img/projects/W_3_yolo_truck/detection.jpg" title="Detection results across camera angles" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid path="assets/img/projects/T_yolo_truck/cover.jpg" title="Cover" class="img-fluid rounded z-depth-1" %}
+
+{% include figure.liquid path="assets/img/projects/T_yolo_truck/detection.jpg" title="Detection results across camera angles" class="img-fluid rounded z-depth-1" %}
 
 **Status: In Progress** &nbsp;·&nbsp; 2025
 
@@ -22,7 +24,7 @@ giscus_comments: true
 
 Most domain shift work focuses on appearance changes: weather, lighting, time of day. Camera-angle shift is different and more fundamental.
 
-{% include figure.liquid path="assets/img/projects/W_3_yolo_truck/shift-diagram.jpg" title="Same truck, different camera positions" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid path="assets/img/projects/T_yolo_truck/shift-diagram.jpg" title="Same truck, different camera positions" class="img-fluid rounded z-depth-1" %}
 
 When the camera moves:
 - **Geometry changes** — aspect ratio, visible surfaces, and perspective distortion all shift

@@ -2,11 +2,11 @@
 layout: page
 title: Few-Shot Fine-Grained Recognition with Context
 description: Consistent few-shot accuracy gains via geographic and language context injection into a CLIP-style baseline.
-img: assets/img/projects/W_5_finegraind/cover.jpg
+img: assets/img/projects/T_finegraind/cover.jpg
 importance: 4
-category: work
+category: tech
 tags: [CLIP, Few-Shot Learning, PyTorch, HuggingFace]
-giscus_comments: false
+giscus_comments: true
 ---
 
 **Outcome.** Added lightweight **context conditioning** to a CLIP-like baseline, yielding **consistent gains** in few-shot regimes.
@@ -18,4 +18,4 @@ giscus_comments: false
 - Built **stratified few-shot splits** with seeded runs for full reproducibility.
 - Reported improvements on fine-grained sets without sacrificing inference speed.
 
-{% include figure.liquid path="assets/img/projects/W_5_finegraind/results.jpg" title="Few-shot results" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid path="assets/img/projects/T_finegraind/results.jpg" title="Few-shot results" class="img-fluid rounded z-depth-1" %}

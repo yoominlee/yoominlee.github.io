@@ -2,9 +2,9 @@
 layout: page
 title: Lens — Sensor-Aware Image Acquisition under Shift
 description: Stabilized recognition accuracy under natural distribution shift via adaptive sensor control — validated across multiple backbones.
-img: assets/img/projects/W_1_lens/cover.jpg
+img: assets/img/projects/T_lens/cover.jpg
 importance: 7
-category: work
+category: tech
 tags: [Computer Vision, Domain Shift, PyTorch, OpenCV]
 giscus_comments: true
 ---
@@ -19,4 +19,4 @@ giscus_comments: true
 - Authored a **data collection protocol** to expose failure modes across illumination/ISO/exposure; automated labeling + metadata.
 - Demonstrated **accuracy stability gains** vs. fixed capture baselines across multiple backbones (CLIP-like and CNN).
 
-{% include figure.liquid path="assets/img/projects/W_1_lens/diagram.jpg" title="System overview" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid path="assets/img/projects/T_lens/diagram.jpg" title="System overview" class="img-fluid rounded z-depth-1" %}

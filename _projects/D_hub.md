@@ -2,11 +2,11 @@
 layout: page
 title: Infectious Disease Response Hub
 description: Adaptive control hub at Gangnam-gu Public Health Center — unifying medical staff, administrators, and the public under a polycarbonate grid structure designed for epidemic response.
-img: assets/img/projects/hub/cover.jpg
+img: assets/img/projects/D_hub/cover.jpg
 importance: 4
 category: design
 tags: [Architecture, Rhino, Space Planning, Urban Design]
-giscus_comments: false
+giscus_comments: true
 ---
 
 **Outcome.** Designed a 3-floor infectious disease response hub on the site of Gangnam-gu Public Health Center — integrating triage, inter-agency collaboration offices, and public-facing spaces within a polycarbonate-clad grid structure that reflects Seoul's urban fabric.
@@ -21,7 +21,7 @@ Korea's infectious disease response system operates top-down — information flo
 
 The question: what does a building look like when its architecture is the coordination mechanism?
 
-{% include figure.liquid path="assets/img/projects/hub/page-02.jpg" title="Problem analysis — system failures across MERS and COVID-19" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid path="assets/img/projects/D_hub/page-02.jpg" title="Problem analysis — system failures across MERS and COVID-19" class="img-fluid rounded z-depth-1" %}
 
 ---
 
@@ -33,7 +33,7 @@ The question: what does a building look like when its architecture is the coordi
 
 The building doesn't merge its users — it creates the conditions for connection. Medical staff, public health administrators, and the general public each have distinct spatial territories and circulation paths. The hub is the point of articulation between them.
 
-{% include figure.liquid path="assets/img/projects/hub/page-03.jpg" title="Site analysis and concept" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid path="assets/img/projects/D_hub/page-03.jpg" title="Site analysis and concept" class="img-fluid rounded z-depth-1" %}
 
 ---
 
@@ -41,7 +41,7 @@ The building doesn't merge its users — it creates the conditions for connectio
 
 Three distinct groups — medical staff (의료진), public health administrators (행정직원), and central response staff (중앙대책부 직원) — were mapped against spatial needs and workflow. Frequency diagrams show how each group moves through the building differently, and where their paths must intersect.
 
-{% include figure.liquid path="assets/img/projects/hub/page-05.jpg" title="User analysis — groups, frequency diagrams, and workflow" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid path="assets/img/projects/D_hub/page-05.jpg" title="User analysis — groups, frequency diagrams, and workflow" class="img-fluid rounded z-depth-1" %}
 
 ---
 
@@ -51,7 +51,7 @@ A six-step process moved from site reading to structural resolution. The explode
 
 Spatial allocation was calibrated using a **grid heatmap** — matching room dimensions to actual gathering patterns derived from user analysis (1–24 people / 25–60 people).
 
-{% include figure.liquid path="assets/img/projects/hub/space-design.jpg" title="Space design process and structure" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid path="assets/img/projects/D_hub/space-design.jpg" title="Space design process and structure" class="img-fluid rounded z-depth-1" %}
 
 ---
 
@@ -61,10 +61,10 @@ The three user groups each enter from different points and follow distinct circu
 
 <div class="row mt-3 align-items-start">
   <div class="col-sm-6">
-    {% include figure.liquid path="assets/img/projects/hub/space-flow.jpg" title="Space flow diagram" class="img-fluid rounded z-depth-1" caption="Circulation and user flow" %}
+    {% include figure.liquid path="assets/img/projects/D_hub/space-flow.jpg" title="Space flow diagram" class="img-fluid rounded z-depth-1" caption="Circulation and user flow" %}
   </div>
   <div class="col-sm-6">
-    {% include figure.liquid path="assets/img/projects/hub/material.jpg" title="Material and space application" class="img-fluid rounded z-depth-1" caption="Polycarbonate opacity zoning" %}
+    {% include figure.liquid path="assets/img/projects/D_hub/material.jpg" title="Material and space application" class="img-fluid rounded z-depth-1" caption="Polycarbonate opacity zoning" %}
   </div>
 </div>
 
@@ -73,6 +73,6 @@ The three user groups each enter from different points and follow distinct circu
 ### Plans & Facade
 
 
-{% include figure.liquid path="assets/img/projects/hub/page-08.jpg" title="Floor plans — 1F triage / 2F shared office / 3F specialized office" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid path="assets/img/projects/D_hub/page-08.jpg" title="Floor plans — 1F triage / 2F shared office / 3F specialized office" class="img-fluid rounded z-depth-1" %}
 
-{% include figure.liquid path="assets/img/projects/hub/page-09-cropped.jpg" title="Facade — street level view" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid path="assets/img/projects/D_hub/page-09-cropped.jpg" title="Facade — street level view" class="img-fluid rounded z-depth-1" %}

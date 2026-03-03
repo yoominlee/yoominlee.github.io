@@ -2,11 +2,11 @@
 layout: page
 title: USC Ginsburg Hall Digital Twin
 description: Research-grade living lab digital twin — multi-source IoT streams fused with 3D building geometry for standardized evaluation and reproducible building research.
-img: assets/img/projects/W_4_digital_twin/cover.jpg
+img: assets/img/projects/T_digital_twin/cover.jpg
 importance: 9
-category: work
+category: tech
 tags: [IoT, Azure, Digital Twin, Python, BIM]
-giscus_comments: false
+giscus_comments: true
 ---
 
 **Outcome.** Building a research-grade digital twin of USC Ginsburg Hall — integrating live IoT sensor streams with 3D building geometry to enable standardized data collection, reproducible evaluation, and rapid prototyping on real-world building data.

@@ -2,11 +2,11 @@
 layout: page
 title: BLINK — 2D Character Animation
 description: Frame-by-frame animation exploring eye movement and light as storytelling devices — geometric characters in dark and bright environments.
-img: assets/img/projects/blink/cover.gif
+img: assets/img/projects/D_blink/cover.gif
 importance: 3
 category: design
 tags: [After Effects, 2D Animation, Character Design]
-giscus_comments: false
+giscus_comments: true
 ---
 
 <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:4px; margin-bottom:2rem;">
@@ -40,6 +40,6 @@ Sound: *Lam Switch Far* (YouTube Audio CC0) · *North Oakland Extasy* — Squadd
 
 <div class="row justify-content-center mt-3">
   <div class="col-sm-6">
-    {% include figure.liquid path="assets/img/projects/blink/poster.png" title="Project poster" class="img-fluid rounded z-depth-1" caption="Project poster — Art 309, Fall 2021" %}
+    {% include figure.liquid path="assets/img/projects/D_blink/poster.png" title="Project poster" class="img-fluid rounded z-depth-1" caption="Project poster — Art 309, Fall 2021" %}
   </div>
 </div>

@@ -2,11 +2,11 @@
 layout: page
 title: Urban Aquaculture — Vertical Fish Farm & Housing
 description: Vertical aquaculture integrated with residential housing at Seoul's Eungbong Rainwater Pump Station — circular production and consumption within a single building.
-img: assets/img/projects/studio-a/image-axon.png
+img: assets/img/projects/D_studio-a/image-axon.png
 importance: 5
 category: design
 tags: [Architecture, Rhino, AutoCAD]
-giscus_comments: false
+giscus_comments: true
 ---
 
 **Outcome.** Proposed a vertical fish farming facility at Seoul's Eungbong Rainwater Pump Station — where aquaculture tanks, residential units, a market, and research labs form a circular production-consumption system embedded in existing urban infrastructure.
@@ -37,9 +37,9 @@ The formal logic is deliberate: the structural grid is orthogonal, reading as a 
 
 <div class="row mt-3 align-items-start">
   <div class="col-sm-7">
-    {% include figure.liquid path="assets/img/projects/studio-a/image-section.png" title="Section Plane" class="img-fluid rounded z-depth-1" caption="Section — water infrastructure at base, aquaculture volumes and dwelling stacked above" %}
+    {% include figure.liquid path="assets/img/projects/D_studio-a/image-section.png" title="Section Plane" class="img-fluid rounded z-depth-1" caption="Section — water infrastructure at base, aquaculture volumes and dwelling stacked above" %}
   </div>
   <div class="col-sm-5">
-    {% include figure.liquid path="assets/img/projects/studio-a/image-axon.png" title="Axonometric" class="img-fluid rounded z-depth-1" caption="Axonometric — Han River edge, urban context, program distribution" %}
+    {% include figure.liquid path="assets/img/projects/D_studio-a/image-axon.png" title="Axonometric" class="img-fluid rounded z-depth-1" caption="Axonometric — Han River edge, urban context, program distribution" %}
   </div>
 </div>

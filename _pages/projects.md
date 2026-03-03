@@ -4,7 +4,7 @@ title: Projects
 permalink: /projects/
 nav: true
 nav_order: 4
-display_categories: [work, design]
+display_categories: [tech, design]
 horizontal: false
 
 _styles: >
