@@ -1,0 +1,23 @@
+categories:
+  - id: all
+    label: "All"
+  - id: places
+    label: "Places"
+  - id: sky
+    label: "Sky"
+  - id: design
+    label: "Design"
+
+photos:
+  - file: gallery/places/sample1.jpg
+    category: places
+    caption: "Frieze LA · Santa Monica, CA · March 2025"
+    alt: "sample1"
+  - file: gallery/places/sample2.jpg
+    category: places
+    caption: "Frieze LA · Santa Monica, CA · March 2025"
+    alt: "sample2"
+  - file: gallery/places/sample3.jpg
+    category: places
+    caption: "Frieze LA · Santa Monica, CA · March 2025"
+    alt: "sample3"

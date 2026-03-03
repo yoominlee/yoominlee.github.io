@@ -1,0 +1,35 @@
+<div class="col">
+  <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
+    <div class="project-overlay-card">
+      <div class="project-overlay-img">
+
+        {% if project.img %}
+          {% include figure.liquid loading="eager" path=project.img alt=project.title class="project-cover-fig" %}
+        {% else %}
+          <div class="project-cover-placeholder"></div>
+        {% endif %}
+
+        {% if project.award %}
+          <div class="project-badge project-badge-award">{{ project.award }}</div>
+        {% endif %}
+
+        {% if project.status == 'active' %}
+          <div class="project-badge project-badge-active">In Progress</div>
+        {% endif %}
+
+        <div class="project-overlay">
+          <h2 class="project-overlay-title">{{ project.title }}</h2>
+          <p class="project-overlay-desc">{{ project.description }}</p>
+          {% if project.tags %}
+            <div class="project-overlay-tags">
+              {% for tag in project.tags %}
+                <span class="project-tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+
+      </div>
+    </div>
+  </a>
+</div>

@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: <a href="mailto:yoomin0104@gmail.com">mail</a> | <a href="https://github.com/yoominlee">GitHub</a> | <a href="https://www.linkedin.com/in/yoominlee1">linkedin</a> # <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 

@@ -58,8 +58,7 @@
       "area": "Computer Science (Artificial Intelligence)",
       "studyType": "Master of Science",
       "startDate": "2025-01-01",
-      "endDate": "2026-12-31(Expected)",
-      "score": "10"//,
+      "endDate": "2026-12-31(Expected)"//,
       // "courses": ["Theory of Relativity"]
     }
   ],
@@ -67,7 +66,7 @@
     {
       "name": "AIoT Group at Seoul National University",
       "position": "Research Member",
-      "url": "https://example.com",
+      "url": "",
       "startDate": "2024-01-01",
       "endDate": "2024-12-01",
       "summary": "Worked on Lens, a sensor-control system that optimizes image acquisition under domain shift. Designed evaluation on real-world datasets and drove targeted data collection to expose failure modes and improve robustness."//,
@@ -78,7 +77,7 @@
     {
       "name": "Multimodal AI Lab at Hanyang University",
       "position": "Undergraduate Researcher",
-      "url": "https://example.com",
+      "url": "",
       "startDate": "2023-08-01",
       "endDate": "2024-12-01",
       "summary": "Explored fine-grained visual recognition with multimodal priors (geography/language). Extended a CLIP/Transformer baseline to inject context and measured consistent gains across few-shot settings."//,
@@ -87,7 +86,7 @@
     {
       "name": "COGA Robotics",
       "position": "Intern Researcher",
-      "url": "https://example.com",
+      "url": "",
       "startDate": "2022-08-01",
       "endDate": "2023-02-01",
       "summary": "Worked on indoor person-following: fused LiDAR and RGB-D in ROS, optimized Deep SORT on Jetson, and profiled perception latency to meet real-time constraints."//,
@@ -112,6 +111,7 @@
       "title": "SNU Ambient AI Competition — 1st Prize",
       "date": "2024-09",
       "awarder": "Seoul National University",
+      // "url": "https://youtu.be/1xL6tBFlIoY?si=oawP7EJ31xm5yfNM",
       "summary": "Built an on-device real-time blurring app (team of 4)."     //   "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
     },
     {
@@ -437,6 +437,73 @@
       "startDate": "2020-08-01",
       "endDate": "2020-11-01",
       "url": ""
+    }
+  ],
+  "Community, Leadership & Teaching": [
+    {
+      "title": "Viterbi Mentor",
+      "institution": "University of Southern California",
+      "year": "Fall 2025",
+      "description": [
+        "Mentored students as part of the USC Viterbi mentorship program"
+      ],
+      "tags": ["Mentoring"]
+    },
+    {
+      "title": "Student Coordinator, IMSC Summer Hackathon",
+      "institution": "USC Integrated Media Systems Center (IMSC)",
+      "year": "Summer 2025",
+      "description": [
+        "Ran a 36-hour CV/ML hackathon for 120+ participants; coordinated 8 judges and 5 sponsors",
+        "Built a GitHub Actions + Docker automated evaluation pipeline (~300 submissions)"
+      ],
+      "tags": ["Organizer", "Hackathon"]
+    },
+    {
+      "title": "Course Grader, DSCI 550: Data Science at Scale",
+      "institution": "University of Southern California",
+      "year": "Fall 2025",
+      "description": [
+        "Graded assignments for DSCI 550 focused on Spark/SQL at scale and reproducible evaluation"
+      ],
+      "tags": ["Teaching"]
+    },
+    {
+      "title": "President (2022), Vice President (2021), HUHS",
+      "institution": "Hanyang University Hard & Software (HUHS)",
+      "year": "2021–2022",
+      "description": [
+        "Led ~200-member org; managed annual budget/events and industry outreach",
+        "Launched seminar and mini-hackathon series"
+      ],
+      "tags": ["Student Leadership"]
+    },
+    {
+      "title": "Art Team Lead, Vietnam Volunteer Service",
+      "institution": "Together Hanyang",
+      "year": "2020",
+      "description": [
+        "Led art team for children's education program; co-planned on-site activities with local partners"
+      ],
+      "tags": ["Service"]
+    },
+    {
+      "title": "Student Council",
+      "institution": "College of Human Ecology, Hanyang University",
+      "year": "2019",
+      "description": [
+        "Supported various student initiatives at the College of Human Ecology"
+      ],
+      "tags": ["Student Leadership"]
+    },
+    {
+      "title": "Member, Student Council",
+      "institution": "Dept. of Interior Architecture Design, Hanyang University",
+      "year": "2019",
+      "description": [
+        "Supported department exhibitions and new-student onboarding"
+      ],
+      "tags": ["Student Leadership"]
     }
   ]
   

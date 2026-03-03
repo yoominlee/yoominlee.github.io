@@ -62,3 +62,28 @@ Teaching → /_pages/teaching.md
 People → /_pages/profiles.md
 
 Submenus(드롭다운) → /_pages/dropdown.md (현재 비활성화 상태)
+
+
+
+
+## Gallery 사진 추가! 
+1. assets/gallery 디렉토리에서 카테고리별로 이미지 추가하기.
+
+Heic 파일이라면    
+for f in *.heic; do sips -s format jpeg "$f" --out "${f%.heic}.jpg"; done\n
+
+for f in *.HEIC; do sips -s format jpeg "$f" --out "${f%.HEIC}.jpg"; done\n
+
+위와 같은 커맨드로 타입 변환.
+
+그리고 현재, place만 비율 고정해뒀음.
+
+
+2. _data 디렉토리의 gallery.yml에서 추가하고.
+
+
+
+
+## TODO
+- tech blog
+- 영상들? (창립, 입학)
