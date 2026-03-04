@@ -4,7 +4,8 @@ title: Gallery
 permalink: /gallery/
 nav: true
 nav_order: 6
-description: A collection of moments from research, places, and life.
+# description: A collection of moments from research, places, and life.
+description: In Progress
 
 _styles: >
   .gallery-filters {
