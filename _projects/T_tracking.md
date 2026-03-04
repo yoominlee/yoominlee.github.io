@@ -2,12 +2,16 @@
 layout: page
 title: Person-Following for Indoor Robots
 description: ROS-based real-time person tracking pipeline fusing RGB-D and LiDAR — deployed on Jetson-class hardware at COGA Robotics.
-img: assets/img/projects/T_tracking/cover.jpg
+# img: assets/img/projects/T_tracking/cover.jpg
 importance: 5
 category: tech
 tags: [ROS, Python, Deep SORT, LiDAR, Edge Deployment]
+proj_role: "Intern Researcher"
+proj_dates: "Dec 2022–Feb 2023"
 giscus_comments: true
 ---
+{% include project_header.liquid %}
+
 
 **Outcome.** Built a real-time person-following system for indoor mobile robots — fusing RGB-D and LiDAR in ROS with Deep SORT tracking, validated under real-world lighting and occlusion conditions on Jetson-class edge hardware.
 

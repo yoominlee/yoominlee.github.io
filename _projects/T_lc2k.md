@@ -1,12 +1,17 @@
 ---
 layout: page
 title: LC-2K Assembler & Simulator
-description: Full assembler and pipeline simulator for the LC-2K ISA — built from scratch in C, including data forwarding, hazard detection, and branch prediction.
-importance: 3
+# description: Full assembler and pipeline simulator for the LC-2K ISA — built from scratch in C, including data forwarding, hazard detection, and branch prediction.
+description: Classic architecture toolchain project - assembler + machine simulator.  
+importance: 4
 category: tech
 tags: [C, Computer Architecture, Pipeline, Assembler, Simulator]
+proj_role: "Class Project (Individual)"
+proj_dates: "2022"
 giscus_comments: true
 ---
+{% include project_header.liquid %}
+
 
 **Role**: Individual &nbsp;·&nbsp; **Course**: Computer Architecture &nbsp;·&nbsp; **Year**: 2022
 

@@ -98,14 +98,27 @@ _styles: >
   }
   .project-badge-award {
     right: 0.6rem;
-    background: var(--global-theme-color);
-    color: #fff;
-  }
-  .project-badge-active {
-    left: 0.6rem;
     background: rgba(255,255,255,0.15);
     color: #fff;
     border: 1px solid rgba(255,255,255,0.4);
+  }
+  .project-badge-active {
+    left: 0.6rem;
+    background: rgba(74, 222, 128, 0.15);
+    color: #fff;
+    border: 1px solid rgba(74, 222, 128, 0.45);
+  }
+  .project-badge-active::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #4ade80;
+    margin-right: 5px;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
   }
   .projects h2.category {
     font-size: 0.72rem;

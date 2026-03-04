@@ -1,6 +1,64 @@
+# yoominlee.github.io
+
+Personal portfolio — built with [al-folio](https://github.com/alshedivat/al-folio), hosted on GitHub Pages.
+
+**→ [yoominlee.github.io](https://yoominlee.github.io)**
+
+---
+
+## Pages
+
+| Page | File | Description |
+|---|---|---|
+| About | `_pages/about.md` | Homepage — bio, news, profile |
+| CV | `_pages/cv.md` | Resume pulled from `assets/json/resume.json` |
+| Projects | `_pages/projects.md` | Portfolio — categories: `tech`, `design` |
+| Gallery | `_pages/gallery.md` | Photo gallery + visitor map |
+
+---
+
+## Adding a Project
+
+1. Create `_projects/T_name.md` (tech) or `_projects/D_name.md` (design)
+2. Add cover image to `assets/img/projects/T_name/` or `D_name/`
+3. Set front matter:
+
+```yaml
+---
+layout: page
+title: Project Title
+description: One-line description.
+img: assets/img/projects/T_name/cover.jpg
+importance: 9        # higher = shown first
+category: tech       # or: design
+tags: [Python, PyTorch]
+giscus_comments: true
+---
+```
+
+---
+
+## Adding Gallery Photos
+
+1. Convert HEIC → JPG if needed:
+```bash
+for f in *.heic; do sips -s format jpeg "$f" --out "${f%.heic}.jpg"; done
+for f in *.HEIC; do sips -s format jpeg "$f" --out "${f%.HEIC}.jpg"; done
+```
+2. Place images in `assets/img/gallery/`
+3. Register in `_data/gallery.yml`
+
+---
+
+## Local Development
+
 build `$bundle exec jekyll serve -l -H localhost`
 and use `http://localhost:4000/`
 
+---
+
+<details>
+<summary>Personal notes </summary>
 
 - `assets/` : 이미지, pdf, js, css 등 정적 자산.
   - `assets/json/resume.json` 있으면 CV 페이지의 1순위 데이터로 사용됨.
@@ -87,3 +145,5 @@ for f in *.HEIC; do sips -s format jpeg "$f" --out "${f%.HEIC}.jpg"; done\n
 ## TODO
 - tech blog
 - 영상들? (창립, 입학)
+
+</details>

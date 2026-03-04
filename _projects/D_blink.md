@@ -6,8 +6,12 @@ img: assets/img/projects/D_blink/cover.gif
 importance: 3
 category: design
 tags: [After Effects, 2D Animation, Character Design]
+proj_role: "Individual"
+proj_dates: "Fall 2021"
 giscus_comments: true
 ---
+{% include project_header.liquid %}
+
 
 <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:4px; margin-bottom:2rem;">
   <video style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;"

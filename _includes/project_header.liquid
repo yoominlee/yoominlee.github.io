@@ -1,0 +1,33 @@
+{% comment %}
+  Project page header component.
+  Renders: pill tags (award, role, dates), link buttons.
+
+  Front matter fields (all optional):
+    award:       e.g. "1st Prize — SNU Ambient AI"
+    proj_role:   e.g. "Team of 5"
+    proj_dates:  e.g. "Aug–Sep 2024"
+    links:       list of {label, url}
+{% endcomment %}
+
+<div style="display:flex; flex-wrap:wrap; gap:0.4rem; margin:0.75rem 0 1.25rem;">
+  {% if page.award %}
+  <span style="display:inline-block; padding:0.2rem 0.75rem; background:var(--global-theme-color); color:#fff; border-radius:2rem; font-size:0.78rem; font-weight:600;">{{ page.award }}</span>
+  {% endif %}
+  {% if page.proj_role %}
+  <span style="display:inline-block; padding:0.2rem 0.75rem; background:var(--global-code-bg-color); color:var(--global-text-color); border-radius:2rem; font-size:0.78rem; border:1px solid var(--global-divider-color);">{{ page.proj_role }}</span>
+  {% endif %}
+  {% if page.proj_dates %}
+  <span style="display:inline-block; padding:0.2rem 0.75rem; background:var(--global-code-bg-color); color:var(--global-text-color); border-radius:2rem; font-size:0.78rem; border:1px solid var(--global-divider-color);">{{ page.proj_dates }}</span>
+  {% endif %}
+</div>
+
+{% if page.links %}
+<div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:1.5rem;">
+  {% for link in page.links %}
+  <a href="{{ link.url }}" target="_blank"
+     style="display:inline-block; padding:0.25rem 0.9rem; border:1px solid var(--global-theme-color); border-radius:2rem; font-size:0.8rem; color:var(--global-theme-color); text-decoration:none;">
+    {{ link.label }}
+  </a>
+  {% endfor %}
+</div>
+{% endif %}

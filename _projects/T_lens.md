@@ -2,12 +2,16 @@
 layout: page
 title: Lens — Sensor-Aware Image Acquisition under Shift
 description: Stabilized recognition accuracy under natural distribution shift via adaptive sensor control — validated across multiple backbones.
-img: assets/img/projects/T_lens/cover.jpg
+# img: assets/img/projects/T_lens/cover.jpg
 importance: 7
 category: tech
 tags: [Computer Vision, Domain Shift, PyTorch, OpenCV]
+proj_role: "Research member"
+proj_dates: "Mar–Dec 2024"
 giscus_comments: true
 ---
+{% include project_header.liquid %}
+
 
 **Outcome.** Prototyped a *sensor-control loop* that tunes capture parameters to scene/domain shift, yielding **more stable accuracy** on natural shift sets.
 

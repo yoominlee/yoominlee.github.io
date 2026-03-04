@@ -6,8 +6,12 @@ img: assets/img/projects/D_hub/cover.jpg
 importance: 4
 category: design
 tags: [Architecture, Rhino, Space Planning, Urban Design]
+proj_role: "Team of 3"
+proj_dates: "Fall 2022"
 giscus_comments: true
 ---
+{% include project_header.liquid %}
+
 
 **Outcome.** Designed a 3-floor infectious disease response hub on the site of Gangnam-gu Public Health Center — integrating triage, inter-agency collaboration offices, and public-facing spaces within a polycarbonate-clad grid structure that reflects Seoul's urban fabric.
 

@@ -7,8 +7,12 @@ importance: 8
 category: tech
 tags: [YOLO, Object Detection, Domain Adaptation, PyTorch]
 status: active
+proj_role: "Individual"
+proj_dates: "2025–present"
 giscus_comments: true
 ---
+{% include project_header.liquid %}
+
 
 {% include figure.liquid path="assets/img/projects/T_yolo_truck/cover.jpg" title="Cover" class="img-fluid rounded z-depth-1" %}
 

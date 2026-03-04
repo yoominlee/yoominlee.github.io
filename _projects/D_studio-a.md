@@ -6,8 +6,12 @@ img: assets/img/projects/D_studio-a/image-axon.png
 importance: 5
 category: design
 tags: [Architecture, Rhino, AutoCAD]
+proj_role: "Team of 3"
+proj_dates: "Fall 2023"
 giscus_comments: true
 ---
+{% include project_header.liquid %}
+
 
 **Outcome.** Proposed a vertical fish farming facility at Seoul's Eungbong Rainwater Pump Station — where aquaculture tanks, residential units, a market, and research labs form a circular production-consumption system embedded in existing urban infrastructure.
 
