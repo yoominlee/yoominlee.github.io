@@ -145,5 +145,5 @@ for f in *.HEIC; do sips -s format jpeg "$f" --out "${f%.HEIC}.jpg"; done\n
 ## TODO
 - tech blog
 - 영상들? (창립, 입학)
-
+- Youtube-CSE4020 내용 추가
 </details>
