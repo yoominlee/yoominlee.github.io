@@ -18,7 +18,7 @@ div.cv .card {
   counter-increment: cv-section;
   background: transparent !important;
   border: none !important;
-  border-top: 1px solid #000 !important;
+  border-top: 1px solid var(--global-text-color) !important;
   border-radius: 0 !important;
   box-shadow: none !important;
   padding: 2.2rem 0 2.8rem 0 !important;
@@ -41,7 +41,7 @@ div.cv .card-title {
   font-weight: 600 !important;
   letter-spacing: 0.14em !important;
   text-transform: uppercase !important;
-  color: rgba(0, 0, 0, 0.35) !important;
+  color: var(--global-text-color-light) !important;
   margin-bottom: 0 !important;
   line-height: 1.4 !important;
 
@@ -54,7 +54,8 @@ div.cv .card-title {
     display: block;
     font-size: 0.6rem;
     font-weight: 400;
-    color: rgba(0, 0, 0, 0.22);
+    color: var(--global-text-color-light);
+    opacity: 0.6;
     letter-spacing: 0.06em;
   }
 }
@@ -667,4 +668,46 @@ td.list-group-name b {
   border-bottom: none !important;
   padding-bottom: 0 !important;
   margin-bottom: 0 !important;
+}
+
+/* ── Dark mode overrides ─────────────────────────────────────────────────── */
+html[data-theme="dark"] {
+  div.cv .card {
+    border-top-color: var(--global-text-color-light) !important;
+  }
+
+  div.cv .list-group-flush .list-group-item {
+    border-bottom-color: var(--global-divider-color) !important;
+  }
+
+  .cv-date {
+    color: var(--global-text-color-light) !important;
+  }
+
+  .cv-entry-score {
+    color: var(--global-text-color-light) !important;
+  }
+
+  .cv-entry-highlights li::before {
+    color: var(--global-text-color-light) !important;
+  }
+
+  div.cv .badge {
+    color: var(--global-text-color-light) !important;
+  }
+
+  span.badge-toc {
+    color: var(--global-text-color) !important;
+    border-bottom-color: var(--global-text-color-light) !important;
+  }
+
+  div.cv a,
+  .post-header.cv-header a {
+    text-decoration-color: var(--global-text-color-light) !important;
+    &:hover { text-decoration-color: var(--global-text-color) !important; }
+  }
+
+  ul.timeline li::before {
+    background: var(--global-text-color-light) !important;
+  }
 }
