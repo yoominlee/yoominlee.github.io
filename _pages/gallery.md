@@ -103,9 +103,10 @@ _styles: >
   {% endif %}
 </div>
 
-<div style="text-align:center; margin-top: 3rem;">
+<div style="margin-top:4rem; padding-top:2rem; border-top:1px solid #000;">
+  <p style="font-size:0.6rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:rgba(0,0,0,0.35); margin-bottom:1.2rem;">Visitor Map</p>
   <a href="https://mapmyvisitors.com/web/1lGdALiaWil_FJ8UFkuPgJt9ZhrAAFsWKSxg74_8Jws" title="Visit tracker">
-    <img src="https://mapmyvisitors.com/map.png?d=1lGdALiaWil_FJ8UFkuPgJt9ZhrAAFsWKSxg74_8Jws&cl=f5ede2&w=300&t=n&co=a6c0bf&cmo=a07d40&cmn=376275&ct=ffffff" alt="Visitor map" style="max-width:300px;" />
+    <img src="https://mapmyvisitors.com/map.png?d=1lGdALiaWil_FJ8UFkuPgJt9ZhrAAFsWKSxg74_8Jws&cl=edecea&w=700&t=n&co=c8c7c3&cmo=f59e0b&cmn=1c1c1c&ct=1c1c1c" alt="Visitor map" style="width:100%; display:block;" />
   </a>
 </div>
 

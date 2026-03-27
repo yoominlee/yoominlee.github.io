@@ -2,6 +2,309 @@
  * CV shared styles
  *****************************/
 
+/*****************************
+ * Architecture Portfolio Style Override
+ *****************************/
+
+/* Section counter */
+div.cv {
+  counter-reset: cv-section;
+  padding-top: 1rem;
+}
+
+/* ── Two-column section layout ───────────────────────────────────────────── */
+
+div.cv .card {
+  counter-increment: cv-section;
+  background: transparent !important;
+  border: none !important;
+  border-top: 1px solid #000 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 2.2rem 0 2.8rem 0 !important;
+  margin-top: 0 !important;
+
+  /* Two-column grid: label left, content right */
+  display: grid !important;
+  grid-template-columns: 140px 1fr !important;
+  column-gap: 3rem !important;
+  align-items: start !important;
+}
+
+/* Section label — left column */
+div.cv .card-title {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  align-self: start !important;
+
+  font-size: 0.6rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: rgba(0, 0, 0, 0.35) !important;
+  margin-bottom: 0 !important;
+  line-height: 1.4 !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.2rem !important;
+
+  &::before {
+    content: counter(cv-section, decimal-leading-zero);
+    display: block;
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.22);
+    letter-spacing: 0.06em;
+  }
+}
+
+/* Content area — right column */
+div.cv .card > div {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+}
+
+/* ── Entry items ─────────────────────────────────────────────────────────── */
+
+div.cv .list-group-flush {
+  border: none !important;
+  background: transparent !important;
+}
+
+div.cv .list-group-flush .list-group-item {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  padding: 1.4rem 0 !important;
+  margin: 0 !important;
+
+  &:first-child { padding-top: 0 !important; }
+  &:last-child  { border-bottom: none !important; padding-bottom: 0 !important; }
+}
+
+/* ── Typography hierarchy ────────────────────────────────────────────────── */
+
+/* Date label (cv-date class) */
+.cv-date {
+  display: block;
+  font-size: 0.62rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.13em !important;
+  text-transform: uppercase !important;
+  color: rgba(0, 0, 0, 0.35) !important;
+  margin-bottom: 0.3rem !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Entry title */
+.cv-entry-title {
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
+  color: var(--global-text-color) !important;
+  margin: 0 0 0.15rem 0 !important;
+
+  a { color: inherit !important; text-decoration: none !important; }
+}
+
+/* Organisation / institution */
+.cv-entry-org {
+  font-size: 0.8rem !important;
+  font-weight: 400 !important;
+  color: var(--global-text-color) !important;
+  margin: 0 !important;
+}
+
+/* Field of study / area */
+.cv-entry-area {
+  font-size: 0.75rem !important;
+  color: var(--global-text-color-light) !important;
+  margin: 0.1rem 0 0 0 !important;
+  font-style: normal !important;
+}
+
+/* Score / GPA */
+.cv-entry-score {
+  font-size: 0.72rem !important;
+  color: rgba(0, 0, 0, 0.35) !important;
+  margin: 0.1rem 0 0 0 !important;
+  letter-spacing: 0.02em !important;
+}
+
+/* Summary paragraph */
+.cv-entry-summary {
+  font-size: 0.78rem !important;
+  color: var(--global-text-color-light) !important;
+  line-height: 1.65 !important;
+  margin: 0.35rem 0 0 0 !important;
+}
+
+/* Highlight bullets */
+.cv-entry-highlights {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0.3rem 0 0 0 !important;
+
+  li {
+    font-size: 0.75rem !important;
+    color: var(--global-text-color-light) !important;
+    line-height: 1.65 !important;
+    padding-left: 0.9rem !important;
+    position: relative !important;
+
+    &::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: rgba(0, 0, 0, 0.22);
+      font-size: 0.6rem;
+      top: 0.18em;
+    }
+  }
+}
+
+/* Remaining badge overrides for sections that still use old markup */
+div.cv .badge {
+  background: transparent !important;
+  color: rgba(0, 0, 0, 0.35) !important;
+  font-size: 0.62rem !important;
+  font-weight: 500 !important;
+  padding: 0 !important;
+  letter-spacing: 0.1em !important;
+  border: none !important;
+  min-width: unset !important;
+  border-radius: 0 !important;
+  text-transform: uppercase !important;
+}
+
+div.cv h6.title {
+  font-size: 0.88rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
+  margin-bottom: 0.15rem !important;
+  color: var(--global-text-color) !important;
+  a { color: inherit !important; text-decoration: none !important; }
+}
+
+div.cv h6[style*="font-size: 0.95rem"]:not([style*="italic"]) {
+  font-size: 0.8rem !important;
+  font-weight: 400 !important;
+  color: var(--global-text-color) !important;
+  letter-spacing: 0 !important;
+  margin-bottom: 0.1rem !important;
+}
+
+/* Summary / area text */
+div.cv h6[style*="italic"] {
+  font-size: 0.82rem !important;
+  font-style: normal !important;
+  color: var(--global-text-color-light) !important;
+  margin-top: 0.4rem !important;
+  line-height: 1.5 !important;
+}
+
+/* Bullet highlights */
+div.cv ul.items {
+  margin-top: 0.6rem !important;
+  padding-left: 0 !important;
+  list-style: none !important;
+
+  li {
+    font-size: 0.82rem !important;
+    color: var(--global-text-color-light) !important;
+    padding-left: 0.8rem !important;
+    position: relative !important;
+
+    &::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: rgba(0, 0, 0, 0.3);
+      font-size: 0.7rem;
+    }
+  }
+}
+
+/* Location text */
+div.cv p.location {
+  font-size: 0.7rem !important;
+  color: var(--global-text-color-light) !important;
+  margin-top: 0.3rem !important;
+  white-space: normal !important;
+}
+
+div.cv i.iconlocation {
+  color: var(--global-text-color-light) !important;
+  font-size: 0.7rem !important;
+}
+
+/* CV page header: large editorial title (scoped to CV only) */
+.post > .post-header > .cv-header-inner .post-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* Awards section: clean */
+div.cv .card:has(> div > ul > li) .list-group-item {
+  padding: 1rem 0 !important;
+}
+
+/* CV page header layout */
+.cv-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cv-header-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+.cv-header-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--global-text-color);
+}
+
+.cv-header-role {
+  font-size: 0.72rem;
+  color: var(--global-text-color-light);
+  letter-spacing: 0.03em;
+}
+
+.cv-pdf-link {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--global-text-color) !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+  margin-top: 0.5rem;
+
+  &:hover {
+    color: var(--global-theme-color) !important;
+  }
+}
+
+/*****************************/
+
 div.container-link-button {
   margin-right: 0.5rem;
 }
@@ -187,7 +490,7 @@ ul.timeline li::before {
   content: "";
   min-height: 2.5rem;
   width: 1px;
-  background: var(--global-text-color);
+  background: rgba(0, 0, 0, 0.2);
   margin: 0;
   padding: 0;
   position: absolute;
@@ -218,3 +521,150 @@ ul.timeline li::before {
      color: var(--global-text-color);
 }
 */
+
+/*****************************
+ * Monochrome + Editorial Overrides
+ * Removes all teal/blue; applies architectural portfolio aesthetic
+ *****************************/
+
+/* All links inside CV: monochrome */
+div.cv a,
+.post-header.cv-header a {
+  color: var(--global-text-color) !important;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 0, 0, 0.25);
+  text-underline-offset: 2px;
+
+  &:hover {
+    color: var(--global-text-color) !important;
+    text-decoration-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Kill all theme-color usage in CV */
+i.iconlocation,
+i.iconinstitution,
+i.icondepartment {
+  color: rgba(0, 0, 0, 0.35) !important;
+  font-size: 0.7rem !important;
+}
+
+td.list-group-category {
+  color: var(--global-text-color) !important;
+  font-size: 0.68rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  padding-bottom: 0.5rem !important;
+}
+
+td.list-group-category-icon {
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+/* TOC sidebar badge: remove colored pill */
+span.badge-toc {
+  background-color: transparent !important;
+  color: var(--global-text-color) !important;
+  font-size: 0.65rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* btncv: remove theme-color hover */
+a.btncv:hover {
+  color: var(--global-text-color) !important;
+  border-color: var(--global-text-color) !important;
+  opacity: 0.6;
+}
+
+/* date column: left-align */
+.date-column {
+  text-align: left !important;
+}
+
+/* date badge: plain monochrome */
+.date-column .badge {
+  background: transparent !important;
+  color: rgba(0, 0, 0, 0.4) !important;
+  font-size: 0.68rem !important;
+  font-weight: 400 !important;
+  padding: 0 !important;
+  letter-spacing: 0.03em !important;
+  min-width: unset !important;
+  border-radius: 0 !important;
+  border: none !important;
+}
+
+/* Remove bootstrap left margin on content columns */
+div.cv .ml-1,
+div.cv .ml-md-4 {
+  margin-left: 0 !important;
+}
+
+div.cv .list-group-item h6:not(.title) {
+  font-weight: 400 !important;
+  color: var(--global-text-color) !important;
+  margin-left: 0 !important;
+}
+
+div.cv .list-group-item h6.title {
+  margin-left: 0 !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+}
+
+/* Indent content column away from date */
+div.cv .col-md-10 {
+  padding-left: 2rem !important;
+}
+
+/* Skills: clean layout */
+div.list-groups {
+  gap: 0;
+}
+
+div.list-group {
+  margin-bottom: 1.5rem !important;
+  padding-right: 2rem !important;
+}
+
+td.list-group-name b {
+  font-weight: 400 !important;
+  font-size: 0.82rem !important;
+  color: var(--global-text-color) !important;
+  letter-spacing: 0.01em !important;
+}
+
+/* TOC sidebar */
+#toc-sidebar {
+  font-size: 0.72rem !important;
+  padding-top: 0.5rem !important;
+
+  a {
+    color: var(--global-text-color-light) !important;
+    text-decoration: none !important;
+    letter-spacing: 0.04em !important;
+
+    &:hover,
+    &.active {
+      color: var(--global-text-color) !important;
+      font-weight: 600 !important;
+    }
+  }
+}
+
+/* CV page title */
+.post > .post-header .post-title {
+  font-size: clamp(2rem, 5vw, 3.2rem) !important;
+  font-weight: 300 !important;
+  letter-spacing: -0.02em !important;
+  text-transform: uppercase !important;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}

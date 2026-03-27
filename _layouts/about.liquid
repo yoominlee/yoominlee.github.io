@@ -1,86 +1,157 @@
 ---
 layout: default
 ---
-<div class="post">
-  <div style="margin-bottom: 1.5rem; overflow: hidden; border-radius: 8px; max-height: 200px;">
-    <img src="{{ '/assets/img/projects/D_blink/cover.gif' | relative_url }}"
-         style="width: 100%; object-fit: cover; object-position: center top;"
-         alt="BLINK animation">
-  </div>
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
+<div class="about-hero">
+  <div class="about-hero-text">
+    {% if page.headline %}
+      <h1 class="about-headline">{{ page.headline }}</h1>
+    {% else %}
+      <h1 class="about-headline">{{ site.first_name }} {{ site.last_name }}</h1>
+    {% endif %}
+    <p class="about-subtitle">{{ page.hero_subtitle | default: page.subtitle }}</p>
+    <div class="about-links">
+      {% assign links = page.hero_links | default: "" %}
+      {% if page.hero_links %}
+        {% for link in page.hero_links %}
+          <a href="{{ link.url }}" {% if link.url contains '://' %}target="_blank"{% endif %}>{{ link.label }}</a>
+        {% endfor %}
       {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
+    </div>
+  </div>
 
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
-          {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
-      </div>
-    {% endif %}
-
-    <div class="clearfix">{{ content }}</div>
-
-    <!-- News -->
-    {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
-      {% include news.liquid limit=true %}
-    {% endif %}
-
-    <!-- Latest posts -->
-    {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
-
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
-    {% endif %}
-
-    {% comment %}<!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
-    {% endif %}{% endcomment %}
-
-    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
-      {% include newsletter.liquid center=true %}
-    {% endif %}
-
-  </article>
+  {% if page.hero_image %}
+  <div class="about-hero-image">
+    <img src="{{ page.hero_image | relative_url }}" alt="Hero image">
+  </div>
+  {% endif %}
 </div>
+
+<div class="about-body">
+  {% if page.profile %}
+    <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+      {% if page.profile.image %}
+        {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+        {% if page.profile.image_circular %}
+          {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+        {% else %}
+          {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
+        {% endif %}
+        {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
+    30vw, 95vw"{% endcapture %}
+        {%
+          include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+          cache_bust=true
+        %}
+      {% endif %}
+      {% if page.profile.more_info %}
+        <div class="more-info">{{ page.profile.more_info }}</div>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="clearfix">{{ content }}</div>
+
+  {% if page.announcements and page.announcements.enabled %}
+    <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a></h2>
+    {% include news.liquid limit=true %}
+  {% endif %}
+
+  {% if page.latest_posts and page.latest_posts.enabled %}
+    <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a></h2>
+    {% include latest_posts.liquid %}
+  {% endif %}
+
+  {% if page.selected_papers %}
+    <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a></h2>
+    {% include selected_papers.liquid %}
+  {% endif %}
+
+  {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
+    {% include newsletter.liquid center=true %}
+  {% endif %}
+</div>
+
+<style>
+  .about-hero {
+    border-bottom: 1px solid #000;
+    padding: 4rem 0 0 0;
+    margin-bottom: 3.5rem;
+  }
+
+  .about-hero-text {
+    max-width: 800px;
+  }
+
+  .about-headline {
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 350;
+    letter-spacing: 0.01em;
+    line-height: 1.05;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: var(--global-text-color);
+  }
+
+  .about-subtitle {
+    font-size: 1.3rem;
+    color: var(--global-text-color-light);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.01em;
+  }
+
+  .about-links {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .about-links a {
+    color: var(--global-text-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--global-text-color);
+    padding-bottom: 1px;
+  }
+
+  .about-links a:hover {
+    color: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+  }
+
+  .about-hero-image {
+    width: 100%;
+    margin-top: 2.5rem;
+    overflow: hidden;
+  }
+
+  .about-hero-image img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .about-body {
+    padding-top: 1rem;
+    font-weight: 300;
+    line-height: 1.75;
+  }
+
+  /* Body text links: no blue, bold, hover gray bg */
+  .about-body a {
+    color: var(--global-text-color);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 2px;
+    padding: 0 2px;
+    transition: background 0.15s ease;
+  }
+
+  .about-body a:hover {
+    background: rgba(0, 0, 0, 0.06);
+    color: var(--global-text-color);
+  }
+</style>

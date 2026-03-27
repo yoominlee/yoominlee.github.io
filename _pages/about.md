@@ -4,14 +4,37 @@ title: About
 permalink: /
 subtitle: <a href="mailto:yoomin0104@gmail.com">mail</a> | <a href="https://github.com/yoominlee">GitHub</a> | <a href="https://www.linkedin.com/in/yoominlee1">linkedin</a> # <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
-profile:
-  align: right
-  image: ym3.jpg
-  image_circular: false # crops the image to make it circular
-  # more_info: <p>Los Angeles, CA</p> # >
-  #   # <p>555 your office number</p>
-  #   # <p>123 your address street</p>
-  #   # <p>Your City, State 12345</p>  
+# --- Hero section (new landing design) ---
+# 처음 임시 버전
+# headline: "Computer Vision. Applied Machine Learning."
+# hero_subtitle: "MS CS (AI) · University of Southern California · Building vision systems that work in the real world."
+
+# headline: "Building AI for spatial intelligence"
+# hero_subtitle: "Applying AI to visual and spatial workflows shaped by real human needs."
+
+headline: "Engineering the future of spatial intelligence"
+hero_subtitle: "AI for visual reasoning, design workflows, and real-world complexity.."
+# hero_image: assets/img/projects/D_blink/cover.gif
+hero_image: assets/img/main_page/UrbanAquaculture_ConceptImg.png
+hero_links:
+  - label: "Projects"
+    url: /projects/
+  - label: "CV"
+    url: /cv/
+  - label: "Mail"
+    url: "mailto:yoomin0104@gmail.com"
+  - label: "GitHub"
+    url: "https://github.com/yoominlee"
+# ------------------------------------------
+
+# profile:
+#   align: right
+#   image: ym3.jpg
+#   image_circular: false # crops the image to make it circular
+#   # more_info: <p>Los Angeles, CA</p> # >
+#   #   # <p>555 your office number</p>
+#   #   # <p>123 your address street</p>
+#   #   # <p>Your City, State 12345</p>
 
 
 selected_papers: false # true # includes a list of papers marked as "selected={true}"
@@ -27,14 +50,14 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
-
+<!-- 
 I’m a *first-year M.S. student* in Computer Science (AI) at the <a href="https://www.cs.usc.edu/">University of Southern California</a>. I work in *computer vision* and *applied machine learning*, with a focus on *measurable quality/robustness* and *reliable, reproducible deployment*. I’m especially interested in *evaluation under distribution shift* and the engineering that turns promising models into dependable products.
 
 Previously, I was a research member in the AIoT Group at <a href="https://en.snu.ac.kr/index.html">Seoul National University</a>, and an undergraduate researcher in the Multimodal AI Lab at <a href="https://www.hanyang.ac.kr/web/eng">Hanyang University</a>; earlier, I worked at <a href="https://en.coga-robotics.com/">COGA Robotics</a>'s advanced R&D center as intern. My projects have spanned *sensor–model co-design* for robust recognition, *dataset design and protocol building*, and *hardening ML pipelines* for real-world use.
 
 I received a B.S. in *Computer Science & Interior Architecture Design* from Hanyang University. The design training sharpened my spatial intuition and human-centered judgement, which I apply to building clear, reproducible ML baselines and fast demos.
 If you’d like to discuss practical ML or vision systems, feel free to reach out by email.
-
+ -->
 
 
 
