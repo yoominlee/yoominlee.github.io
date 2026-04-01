@@ -2,7 +2,8 @@
 layout: page
 title: Infectious Disease Response Hub
 description: Adaptive control hub at Gangnam-gu Public Health Center — unifying medical staff, administrators, and the public under a polycarbonate grid structure designed for epidemic response.
-img: assets/img/projects/D_hub/cover.jpg
+# img: assets/img/projects/D_hub/cover.jpg
+img: assets/img/projects/D_hub/Gen-1-cut.png
 importance: 4
 category: design
 tags: [Architecture, Rhino, Space Planning, Urban Design]
@@ -18,6 +19,11 @@ giscus_comments: true
 **Role**: Team of 3 · **Dates**: Fall 2022 · **Context**: Interior Architecture Studio · **Tools**: Rhino, AutoCAD
 
 ---
+
+
+{% include figure.liquid path="assets/img/projects/D_hub/Gen-1.png" title="Facade — street level view" class="img-fluid rounded z-depth-1" %}
+
+
 
 ### Problem
 
@@ -74,9 +80,7 @@ The three user groups each enter from different points and follow distinct circu
 
 ---
 
-### Plans & Facade
+### Plans 
 
 
 {% include figure.liquid path="assets/img/projects/D_hub/page-08.jpg" title="Floor plans — 1F triage / 2F shared office / 3F specialized office" class="img-fluid rounded z-depth-1" %}
-
-{% include figure.liquid path="assets/img/projects/D_hub/page-09-cropped.jpg" title="Facade — street level view" class="img-fluid rounded z-depth-1" %}
