@@ -1,21 +1,25 @@
 ---
 layout: page
-title: Acrylic Chair Study — Layered Transparency
-description: A laser-cut acrylic chair study exploring how contour layering, transparency, and color can define volume through minimal geometry.
+# title: Acrylic Chair Study — Layered Transparency
+title: Furniture Design - Acrylic Chair
+# description: A laser-cut acrylic chair study exploring how contour layering, transparency, and color can define volume through minimal geometry.
+description: Digital Fabrication - 2021
 img: assets/img/projects/D_chair/image-pair.png
 importance: 2
 category: design
-tags: [Design, Furniture, Acrylic, Laser Cutting]
+tags: [Design, Furniture, Laser Cutting]
 proj_role: "Individual Project"
 proj_dates: "Spring 2021"
 giscus_comments: true
+
 ---
 {% include project_header.liquid %}
 
 
-**Outcome.** A chair study developed through laser-cut acrylic layers, where contour profiles, transparency, and fluorescent color produce a compact object with visual depth and structural clarity.
+<!-- **Outcome.** A chair study developed through laser-cut acrylic layers, where contour profiles, transparency, and fluorescent color produce a compact object with visual depth and structural clarity. -->
 
-**Role**: Individual Project · **Dates**: Spring 2021 · **Context**: Furniture Design & Fabrication Studio · **Tools**: Rhino, Laser Cutting, Acrylic Fabrication, Physical Prototyping
+<!-- **Role**: Individual Project · **Dates**: Spring 2021 · **Context**: Furniture Design & Fabrication Studio · **Tools**: Rhino, Laser Cutting, Acrylic Fabrication, Physical Prototyping -->
+**Context**: Furniture Design & Fabrication Studio · **Tools**: Adobe Illustrator, Laser Cutting, Acrylic Fabrication, Physical Prototyping
 
 ---
 

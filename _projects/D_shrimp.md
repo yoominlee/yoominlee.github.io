@@ -1,12 +1,13 @@
 ---
 layout: page
-title: Shrimp Study — Laser-Cut Cardboard Mobile
-description: A suspended cardboard study translating the anatomy and movement of a shrimp into a lightweight laser-cut mobile.
+title: Shrimp Abstraction
+# description: A suspended cardboard study translating the anatomy and movement of a shrimp into a lightweight laser-cut mobile.
+description: Digital Fabrication - 2021
 # img: assets/img/projects/D_shrimp/2-red-3.jpg
 img: assets/img/projects/D_shrimp/2-red-5_EDIT.png
 importance: 1
 category: design
-tags: [Design, Laser Cutting, Cardboard, Fabrication]
+tags: [Design, CAD, Laser Cutting, Fabrication]
 proj_role: "Individual Project"
 proj_dates: "Spring 2021"
 giscus_comments: true

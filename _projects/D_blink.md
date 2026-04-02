@@ -1,7 +1,8 @@
 ---
 layout: page
 title: BLINK — 2D Character Animation
-description: Frame-by-frame animation exploring eye movement and light as storytelling devices — geometric characters in dark and bright environments.
+# description: Frame-by-frame animation exploring eye movement and light as storytelling devices — geometric characters in dark and bright environments.
+description: Multimedia - 2021
 img: assets/img/projects/D_blink/cover.gif
 importance: 3
 category: design

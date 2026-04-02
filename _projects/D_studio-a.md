@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Urban Aquaculture — Vertical Fish Farm & Housing
-description: Vertical aquaculture integrated with residential housing at Seoul's Eungbong Rainwater Pump Station — circular production and consumption within a single building.
+# description: Vertical aquaculture integrated with residential housing at Seoul's Eungbong Rainwater Pump Station — circular production and consumption within a single building.
+description: Architecture Design Studio - 2023
 img: assets/img/projects/D_studio-a/image-axon.png
 importance: 5
 category: design

@@ -5,7 +5,8 @@ description: Stabilized recognition accuracy under natural distribution shift vi
 # img: assets/img/projects/T_lens/cover.jpg
 importance: 6
 category: tech
-tags: [Computer Vision, Domain Shift, PyTorch, OpenCV]
+# tags: [Computer Vision, Domain Shift, PyTorch, OpenCV]
+tags: [Computer Vision, Domain Shift, PyTorch]
 proj_role: "Research member"
 proj_dates: "Mar–Dec 2024"
 giscus_comments: true

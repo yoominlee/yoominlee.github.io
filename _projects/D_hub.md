@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Infectious Disease Response Hub
-description: Adaptive control hub at Gangnam-gu Public Health Center — unifying medical staff, administrators, and the public under a polycarbonate grid structure designed for epidemic response.
+# description: Adaptive control hub at Gangnam-gu Public Health Center — unifying medical staff, administrators, and the public under a polycarbonate grid structure designed for epidemic response.
+description: Architecture Design Studio - 2022
 # img: assets/img/projects/D_hub/cover.jpg
-img: assets/img/projects/D_hub/Gen-1-cut.png
+img: assets/img/projects/D_hub/Gen-2-cut.png
 importance: 4
 category: design
 tags: [Architecture, Rhino, Space Planning, Urban Design]
@@ -14,14 +15,14 @@ giscus_comments: true
 {% include project_header.liquid %}
 
 
-**Outcome.** Designed a 3-floor infectious disease response hub on the site of Gangnam-gu Public Health Center — integrating triage, inter-agency collaboration offices, and public-facing spaces within a polycarbonate-clad grid structure that reflects Seoul's urban fabric.
+<!-- **Outcome.** Designed a 3-floor infectious disease response hub on the site of Gangnam-gu Public Health Center — integrating triage, inter-agency collaboration offices, and public-facing spaces within a polycarbonate-clad grid structure that reflects Seoul's urban fabric. -->
 
 **Role**: Team of 3 · **Dates**: Fall 2022 · **Context**: Interior Architecture Studio · **Tools**: Rhino, AutoCAD
 
 ---
 
 
-{% include figure.liquid path="assets/img/projects/D_hub/Gen-1.png" title="Facade — street level view" class="img-fluid rounded z-depth-1" %}
+{% include figure.liquid path="assets/img/projects/D_hub/Gen-2-cut-1.png" title="Facade — street level view" class="img-fluid rounded z-depth-1" %}
 
 
 

@@ -2,7 +2,7 @@
 layout: page
 title: Fine-Grained Classification
 description: From self-rendered 3D dataset and CNN baseline to CLIP-based few-shot fine-grained recognition with context conditioning.
-img: assets/img/projects/T_furniture/cover-edit-cut_EDIT.jpg
+img: assets/img/projects/T_furniture/cover-edit-cut_EDIT.png
 importance: 7
 category: tech
 tags: [TensorFlow, PyTorch, CLIP, Few-Shot Learning, 3D Rendering, HuggingFace, Python]

@@ -1,0 +1,25 @@
+<script>
+(function () {
+  // Open-Meteo — Los Angeles, CA (34.0522, -118.2437)
+  fetch('https://api.open-meteo.com/v1/forecast?latitude=34.0522&longitude=-118.2437&current=temperature_2m,weather_code&temperature_unit=celsius&timezone=America%2FLos_Angeles')
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      var c = data.current.temperature_2m;
+      var f = (c * 9 / 5 + 32).toFixed(1);
+      var code = data.current.weather_code;
+      var icon;
+      if      (code === 0)            icon = '☀️';
+      else if (code <= 2)             icon = '🌤️';
+      else if (code === 3)            icon = '☁️';
+      else if (code <= 49)            icon = '🌫️';
+      else if (code <= 67)            icon = '🌧️';
+      else if (code <= 77)            icon = '❄️';
+      else if (code <= 82)            icon = '🌦️';
+      else if (code <= 86)            icon = '🌨️';
+      else                            icon = '⛈️';
+      var el = document.getElementById('weather-line');
+      if (el) el.textContent = icon + '\u2002' + c.toFixed(1) + ' °C / ' + f + ' °F';
+    })
+    .catch(function () {});
+})();
+</script>
