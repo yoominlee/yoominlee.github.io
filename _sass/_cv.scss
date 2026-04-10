@@ -670,6 +670,43 @@ td.list-group-name b {
   margin-bottom: 0 !important;
 }
 
+/* ── Basics section table ────────────────────────────────────────────────── */
+
+div.cv .table-cv-map {
+  margin: 0 !important;
+  width: 100% !important;
+
+  td {
+    padding: 0.3rem 0 !important;
+    border: none !important;
+    vertical-align: top !important;
+    background: transparent !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Label column */
+  td:first-child {
+    font-size: 0.62rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    color: var(--global-text-color-light) !important;
+    white-space: nowrap !important;
+    padding-right: 1.5rem !important;
+    width: 80px !important;
+
+    b { font-weight: 600 !important; }
+  }
+
+  /* Value column */
+  td:last-child {
+    font-size: 0.82rem !important;
+    font-weight: 400 !important;
+    color: var(--global-text-color) !important;
+    letter-spacing: 0 !important;
+  }
+}
+
 /* ── Dark mode overrides ─────────────────────────────────────────────────── */
 html[data-theme="dark"] {
   div.cv .card {

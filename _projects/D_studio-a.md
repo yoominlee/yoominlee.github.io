@@ -2,21 +2,27 @@
 layout: page
 title: Urban Aquaculture — Vertical Fish Farm & Housing
 # description: Vertical aquaculture integrated with residential housing at Seoul's Eungbong Rainwater Pump Station — circular production and consumption within a single building.
-description: Architecture Design Studio - 2023
+description: Architecture Design Studio 2 - 2023
 img: assets/img/projects/D_studio-a/image-axon.png
 importance: 5
 category: design
-tags: [Architecture, Rhino, AutoCAD]
+tags: [Architecture, Grasshopper, Rhino, AutoCAD]
 proj_role: "Team of 3"
 proj_dates: "Fall 2023"
+proj_question: "Could we obtain seafood in cities that is free from marine pollution?"
+# alt questions:
+# "Can a fish farm and an apartment building share the same structure?"
+# "What does a circular food system look like at the scale of a single building?"
+# "Where does Seoul's water go — and what could grow there instead?"
+# "How do you design for production and living at the same time?"
 giscus_comments: true
 ---
 {% include project_header.liquid %}
 
 
-**Outcome.** Proposed a vertical fish farming facility at Seoul's Eungbong Rainwater Pump Station — where aquaculture tanks, residential units, a market, and research labs form a circular production-consumption system embedded in existing urban infrastructure.
+Proposed a vertical fish farming facility at Seoul's Eungbong Rainwater Pump Station — where aquaculture tanks, residential units, a market, and research labs form a circular production-consumption system embedded in existing urban infrastructure.
 
-**Role**: Team of 3 · **Dates**: Fall 2023 · **Context**: Interior Architecture Studio 2 · **Tools**: Grasshopper, Rhino, AutoCAD
+<!-- **Role**: Team of 3 · **Dates**: Fall 2023 · **Context**: Interior Architecture Studio 2 · **Tools**: Grasshopper, Rhino, AutoCAD -->
 
 ---
 
