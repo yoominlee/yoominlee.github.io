@@ -9,12 +9,18 @@ category: tech
 tags: [Computer Vision, Domain Shift, PyTorch]
 proj_role: "Research member"
 proj_dates: "Mar–Dec 2024"
+# proj_question: "What if the camera, not the model, was the problem?"
+# alt questions:
+# "Can you stabilize recognition accuracy before the image is even taken?"
+# "What does a sensor 'know' about where it is — and can that knowledge help?"
+# "How much accuracy is lost before the image reaches the model?"
+# "Is domain shift a model problem or a capture problem?"
 giscus_comments: true
 ---
 {% include project_header.liquid %}
 
 
-**Outcome.** Prototyped a *sensor-control loop* that tunes capture parameters to scene/domain shift, yielding **more stable accuracy** on natural shift sets.
+Prototyped a *sensor-control loop* that tunes capture parameters to scene/domain shift, yielding **more stable accuracy** on natural shift sets.
 
 **Role**: Research member · **Dates**: Mar–Dec 2024 · **Stack**: Python, PyTorch, OpenCV, ImageMagick  
 **Context**: AIoT Group @ SNU

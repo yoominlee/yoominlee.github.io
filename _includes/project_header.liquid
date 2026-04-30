@@ -1,14 +1,17 @@
 {% comment %}
   Project page header component.
-  Renders: TL;DR block, info sheet (type/role/dates/stack), link buttons.
+  Renders: TL;DR, horizontal info sheet, intro text, links, question block.
 
   Front matter fields (all optional):
-    tldr:        one-sentence summary shown prominently at top
-    award:       e.g. "1st Prize — SNU Ambient AI"
-    proj_role:   e.g. "Team of 5"
-    proj_dates:  e.g. "Aug–Sep 2024"
-    proj_stack:  e.g. "PyTorch · Android · YOLO"
-    links:       list of {label, url}
+    tldr:         one-sentence summary (tech)
+    proj_intro:   one-paragraph intro text shown below info sheet
+    award:        e.g. "1st Prize — SNU Ambient AI"
+    proj_role:    e.g. "Team of 5"
+    proj_dates:   e.g. "Aug–Sep 2024"
+    proj_context: e.g. "Interior Architecture Studio 2"
+    proj_tools:   e.g. "Rhino · Grasshopper · AutoCAD"
+    proj_stack:   e.g. "PyTorch · Android · YOLO"
+    links:        list of {label, url}
 {% endcomment %}
 
 {% if page.tldr %}
@@ -16,10 +19,10 @@
 {% endif %}
 
 <div class="proj-info-sheet">
-  {% if page.category %}
+  {% if page.proj_dates %}
   <div class="proj-info-cell">
-    <span class="proj-info-label">Type</span>
-    <span class="proj-info-value">{{ page.category | capitalize }}</span>
+    <span class="proj-info-label">Date</span>
+    <span class="proj-info-value">{{ page.proj_dates }}</span>
   </div>
   {% endif %}
   {% if page.proj_role %}
@@ -28,20 +31,25 @@
     <span class="proj-info-value">{{ page.proj_role }}</span>
   </div>
   {% endif %}
-  {% if page.proj_dates %}
+  {% if page.proj_context %}
   <div class="proj-info-cell">
-    <span class="proj-info-label">Dates</span>
-    <span class="proj-info-value">{{ page.proj_dates }}</span>
+    <span class="proj-info-label">Context</span>
+    <span class="proj-info-value">{{ page.proj_context }}</span>
   </div>
   {% endif %}
-  {% if page.proj_stack %}
+  {% if page.proj_tools %}
+  <div class="proj-info-cell">
+    <span class="proj-info-label">Tools</span>
+    <span class="proj-info-value">{{ page.proj_tools }}</span>
+  </div>
+  {% elsif page.proj_stack %}
   <div class="proj-info-cell">
     <span class="proj-info-label">Stack</span>
     <span class="proj-info-value">{{ page.proj_stack }}</span>
   </div>
   {% elsif page.tags %}
   <div class="proj-info-cell">
-    <span class="proj-info-label">Stack</span>
+    <span class="proj-info-label">Tools</span>
     <span class="proj-info-value">{{ page.tags | join: ' · ' }}</span>
   </div>
   {% endif %}
@@ -52,6 +60,10 @@
   </div>
   {% endif %}
 </div>
+
+{% if page.proj_intro %}
+<p class="proj-intro-text">{{ page.proj_intro }}</p>
+{% endif %}
 
 {% if page.links %}
 <div class="proj-links">
@@ -148,6 +160,7 @@
   max-width: 580px;
 }
 
+/* ── Info sheet ──────────────────────────────────────────────────────────── */
 .proj-tldr {
   border-left: 3px solid var(--global-theme-color);
   margin: 1.5rem 0 1.8rem;
@@ -197,6 +210,14 @@
   color: var(--global-theme-color);
 }
 
+.proj-intro-text {
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--global-text-color);
+  margin: 0 0 1.5rem;
+}
+
 .proj-links {
   display: flex;
   flex-wrap: wrap;
@@ -219,5 +240,42 @@
 .proj-link-btn:hover {
   border-color: var(--global-theme-color);
   color: var(--global-theme-color) !important;
+}
+
+/* ── Two-column preview (image left, text right) ─────────────────────────── */
+.proj-two-col {
+  display: grid;
+  grid-template-columns: 42% 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.proj-two-col-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.proj-two-col-text {
+  font-size: 0.88rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--global-text-color);
+}
+
+.proj-two-col-text p {
+  margin-bottom: 0.9rem;
+}
+
+.proj-two-col-text p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  .proj-two-col {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

@@ -10,6 +10,12 @@ award: "1st Prize — SNU Ambient AI"
 proj_role: "Team of 5"
 proj_dates: "Aug–Sep 2024"
 proj_stack: "PyTorch Mobile · Android · YOLO"
+# proj_question: "How do you blur faces in real time when the phone is already overheating?"
+# alt questions:
+# "What happens to your ML model when the battery starts to die?"
+# "Can privacy be protected on a mid-range phone, without the cloud?"
+# "What does it take to make a neural network fast enough to run in your pocket — always?"
+# "When FPS drops, who decides what to sacrifice: accuracy or speed?"
 tldr: "Built a mobile privacy-blurring pipeline that hits target FPS on-device under real battery and thermal constraints — won 1st prize at the SNU Ambient AI Competition."
 links:
   - label: "Demo Video"

@@ -10,12 +10,18 @@ status: active
 tags: [IoT, Azure, Digital Twin, Python, BIM]
 proj_role: "Research Member"
 proj_dates: "2025–Present"
+# proj_question: "What if a building could describe itself in real time?"
+# alt questions:
+# "How do you turn a building into data — and keep it useful?"
+# "What does it mean to make a building reproducible for research?"
+# "How much of a building can you know without being inside it?"
+# "What would it look like if a building had a live dashboard?"
 giscus_comments: true
 ---
 {% include project_header.liquid %}
 
 
-**Outcome.** Building a research-grade digital twin of USC Ginsburg Hall — integrating live IoT sensor streams with 3D building geometry to enable standardized data collection, reproducible evaluation, and rapid prototyping on real-world building data.
+Building a research-grade digital twin of USC Ginsburg Hall — integrating live IoT sensor streams with 3D building geometry to enable standardized data collection, reproducible evaluation, and rapid prototyping on real-world building data.
 
 **Role**: Research Member · **Dates**: 2025– · **Context**: USC, Advisor: Prof. David Gerber · **Stack**: Python, Azure Blob Storage, IoT
 

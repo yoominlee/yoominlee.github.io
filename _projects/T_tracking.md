@@ -8,12 +8,18 @@ category: tech
 tags: [ROS, Python, Deep SORT, LiDAR, Edge Deployment]
 proj_role: "Intern Researcher"
 proj_dates: "Dec 2022–Feb 2023"
+# proj_question: "What does it take to follow a person through a doorway in the dark?"
+# alt questions:
+# "How does a robot decide where you are when it can't see you clearly?"
+# "When one sensor fails, can another take over — in real time?"
+# "What's the minimum hardware a robot needs to reliably track a moving person?"
+# "How do you make a robot that knows when it's lost?"
 giscus_comments: true
 ---
 {% include project_header.liquid %}
 
 
-**Outcome.** Built a real-time person-following system for indoor mobile robots — fusing RGB-D and LiDAR in ROS with Deep SORT tracking, validated under real-world lighting and occlusion conditions on Jetson-class edge hardware.
+Built a real-time person-following system for indoor mobile robots — fusing RGB-D and LiDAR in ROS with Deep SORT tracking, validated under real-world lighting and occlusion conditions on Jetson-class edge hardware.
 
 **Role**: Intern Researcher · **Dates**: Dec 2022 – Feb 2023 · **Context**: COGA Robotics · **Stack**: Python, ROS, Deep SORT
 

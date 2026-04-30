@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Urban Aquaculture — Vertical Fish Farm & Housing
+# title: Urban Aquaculture — Vertical Fish Farm & Housing
+title: Urban Aquaculture
 # description: Vertical aquaculture integrated with residential housing at Seoul's Eungbong Rainwater Pump Station — circular production and consumption within a single building.
 description: Architecture Design Studio 2 - 2023
 img: assets/img/projects/D_studio-a/image-axon.png
@@ -9,6 +10,9 @@ category: design
 tags: [Architecture, Grasshopper, Rhino, AutoCAD]
 proj_role: "Team of 3"
 proj_dates: "Fall 2023"
+proj_context: "Interior Architecture Studio 2"
+proj_tools: "Grasshopper · Rhino · AutoCAD"
+# proj_intro: "A vertical aquaculture facility proposed for the site of Seoul's Eungbong Rainwater Pump Station — where the city's existing water infrastructure becomes the foundation for a circular production-consumption system. Aquaculture tanks, residential units, a public market, and research labs are stacked within a single structure, embedding food production into the fabric of the urban block."
 proj_question: "Could we obtain seafood in cities that is free from marine pollution?"
 # alt questions:
 # "Can a fish farm and an apartment building share the same structure?"
@@ -20,7 +24,7 @@ giscus_comments: true
 {% include project_header.liquid %}
 
 
-Proposed a vertical fish farming facility at Seoul's Eungbong Rainwater Pump Station — where aquaculture tanks, residential units, a market, and research labs form a circular production-consumption system embedded in existing urban infrastructure.
+A vertical aquaculture facility proposed for the site of Seoul's Eungbong Rainwater Pump Station — where the city's existing water infrastructure becomes the foundation for a circular production-consumption system. Aquaculture tanks, residential units, a public market, and research labs are stacked within a single structure, embedding food production into the fabric of the urban block.
 
 <!-- **Role**: Team of 3 · **Dates**: Fall 2023 · **Context**: Interior Architecture Studio 2 · **Tools**: Grasshopper, Rhino, AutoCAD -->
 
@@ -52,5 +56,19 @@ The formal logic is deliberate: the structural grid is orthogonal, reading as a 
   </div>
   <div class="col-sm-5">
     {% include figure.liquid path="assets/img/projects/D_studio-a/image-axon.png" title="Axonometric" class="img-fluid rounded z-depth-1" caption="Axonometric — Han River edge, urban context, program distribution" %}
+  </div>
+</div>
+
+---
+
+<!-- Two-column layout preview -->
+<div class="proj-two-col">
+  <div class="proj-two-col-img">
+    {% include figure.liquid path="assets/img/projects/D_studio-a/image-axon.png" class="img-fluid" %}
+  </div>
+  <div class="proj-two-col-text">
+    <p>A vertical aquaculture facility proposed for the site of Seoul's Eungbong Rainwater Pump Station — where the city's existing water infrastructure becomes the foundation for a circular production-consumption system.</p>
+    <p>Aquaculture tanks, residential units, a public market, and research labs are stacked within a single structure, embedding food production into the fabric of the urban block. Residents live above the source of their food. Rainwater collected by the pump station feeds directly into the fish tanks above.</p>
+    <p>The structural grid is orthogonal, reading as a conventional urban building from the outside. Inside, the tank volumes are amorphous — shaped by biological need and circulation, not by module.</p>
   </div>
 </div>
